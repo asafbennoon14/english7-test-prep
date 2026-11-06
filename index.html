@@ -1,617 +1,79 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English Test Prep – כיתה ז׳ – Unit 1</title>
-<style>
-:root{--p:#0e7490;--p2:#0891b2;--g:#16a34a;--r:#dc2626;--bg:#f0f9ff}
-*{box-sizing:border-box}
-body{font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);margin:0;color:#1f2937;line-height:1.6}
-header{background:linear-gradient(135deg,#0e7490,#7c3aed);color:#fff;padding:22px;text-align:center}
-header h1{margin:0;font-size:1.8em}
-nav{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:10px;background:#fff;position:sticky;top:0;z-index:5;box-shadow:0 2px 6px #0001}
-nav button{border:none;background:#e0f2fe;color:var(--p);padding:9px 14px;border-radius:20px;cursor:pointer;font-size:1em;font-weight:600}
-nav button.active{background:var(--p);color:#fff}
-main{max-width:1000px;margin:auto;padding:16px}
-.card{background:#fff;border-radius:14px;padding:18px 22px;margin:14px 0;box-shadow:0 2px 10px #0000000d}
-h2{color:var(--p);margin-top:0} h3.part{background:#e0f2fe;color:var(--p);padding:6px 12px;border-radius:8px;direction:ltr;text-align:left}
-.en{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:"Segoe UI",Arial,sans-serif}
-.sent{direction:ltr;text-align:left;font-size:1.15em;background:#f8fafc;padding:8px 12px;border-radius:8px;margin:6px 0}
-.tip{background:#fef9c3;border-right:5px solid #eab308;padding:10px 14px;border-radius:8px;margin:10px 0}
-.rule{background:#e0f2fe;border-right:5px solid var(--p);padding:10px 14px;border-radius:8px;margin:10px 0}
-.q{border:2px solid #e5e7eb;border-radius:12px;padding:12px 16px;margin:12px 0;background:#fff}
-.q.ok{border-color:var(--g);background:#f0fdf4}.q.bad{border-color:var(--r);background:#fef2f2}
-.q .num{font-weight:700;color:var(--p)}
-.ans{margin-top:6px}
-.q label{display:inline-block;margin:4px 6px;cursor:pointer;background:#f3f4f6;padding:5px 12px;border-radius:8px}
-.en-in{direction:ltr;text-align:left;font-size:1.05em;padding:7px;border:2px solid #bae6fd;border-radius:8px;font-family:inherit}
-input.en-in{width:160px}input.en-in.wide{width:280px;max-width:100%}textarea.en-in{width:100%}
-.fb{margin-top:8px;font-weight:600}.fb.ok{color:var(--g)}.fb.bad{color:var(--r)}.fb .ex{font-weight:400;color:#374151;display:block}
-.btn{background:var(--p);color:#fff;border:none;padding:9px 16px;border-radius:10px;font-size:1em;cursor:pointer;margin:4px 3px;font-weight:600}
-.btn.sec{background:#64748b}.btn.green{background:var(--g)}.btn.red{background:#e11d48}
-.btn.lvb.easy{background:#16a34a}.btn.lvb.medium{background:#ca8a04}.btn.lvb.hard{background:#dc2626}
-.spk{border:none;background:#e0f2fe;border-radius:8px;cursor:pointer;padding:2px 7px;font-size:.95em}
-.lv{display:inline-block;padding:1px 8px;border-radius:10px;font-size:.78em;font-weight:700;color:#fff}
-.lv.easy{background:#16a34a}.lv.medium{background:#eab308}.lv.hard{background:#dc2626}
-.passage{direction:ltr;text-align:left;background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px 20px;font-size:1.08em;line-height:1.8;margin:10px 0}
-.ptitle{font-weight:700;font-size:1.2em;color:#92400e;margin-bottom:6px}
-.score{font-size:1.4em;font-weight:700;text-align:center;padding:10px}
-table{border-collapse:collapse;width:100%;margin:6px 0}td,th{border:1px solid #e5e7eb;padding:7px;text-align:center}th{background:#e0f2fe}
-.vt td:first-child{text-align:left}
-.bar{height:14px;border-radius:7px;background:#e5e7eb;overflow:hidden}.bar>div{height:100%}
-.hidden{display:none}.row{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin:6px 0}.small{font-size:.88em;color:#6b7280}
-.pm{border:1px solid #e0f2fe;border-radius:12px;padding:10px 14px;margin:10px 0;background:#fafdff}.pm h3{margin:4px 0}
-.tests{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
-.tcard{border:2px solid #bae6fd;border-radius:12px;padding:12px;cursor:pointer;background:#f8fdff}.tcard:hover{border-color:var(--p)}.tcard b{color:var(--p);font-size:1.1em}
-.fcard{max-width:420px;margin:10px auto;min-height:160px;border-radius:16px;background:linear-gradient(135deg,#e0f2fe,#ede9fe);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;padding:16px;text-align:center;box-shadow:0 4px 14px #0001}
-.wbox{border:2px dashed #7dd3fc;border-radius:12px;padding:12px;margin:10px 0}.wprompt{margin-bottom:8px}
-.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{background:#ffe4e6;padding:4px 10px;border-radius:12px}
-#timer{color:#e11d48}
-</style></head>
-<body>
-<header><h1>🇬🇧 English Test Prep – כיתה ז׳</h1><div>מבחן ב־19.10 · Unseen · Vocabulary Unit 1 (p. 32) · Writing</div></header>
-<nav>
- <button data-t="learn" class="active">📘 הסברים</button>
- <button data-t="vocab">🔤 רשימת המילים</button>
- <button data-t="practice">✏️ דפי תרגול</button>
- <button data-t="test">📝 מבחנים</button>
- <button data-t="report">📊 הדוח שלי</button>
-</nav>
-<main>
-<section id="learn">
-<div class="card"><h2>👋 Hi! איך עובדים כאן?</h2>
-<p>החומר למבחן כולל שלושה חלקים:</p>
-<table><tr><th>חלק</th><th>מה צריך לדעת</th><th>איפה מתרגלים</th></tr>
-<tr><td>1. Unseen</td><td>לקרוא קטע ולענות על שאלות</td><td>✏️ דפי תרגול: 8 טקסטים</td></tr>
-<tr><td>2. Vocabulary</td><td>כל המילים ביחידה 1, עמוד 32</td><td>🔤 רשימה וכרטיסיות + ✏️ תרגול ב־3 רמות</td></tr>
-<tr><td>3. Writing</td><td>פסקה של עד 50 מילים על יום טיפוסי</td><td>✏️ סדנת כתיבה עם בדיקה אוטומטית</td></tr></table>
-<div class="rule"><b>מסלול מומלץ:</b> כרטיסיות ← מילים ברמה קלה ← בינונית ← מאתגרת · Unseen קל ← בינוני ← מאתגר · כתיבת פסקה כל יום · מבחן א ← ב ← ג ← סימולציה.</div>
-<div class="tip">🔊 בכל מקום שיש רמקול אפשר לשמוע הגייה באנגלית.</div></div>
-
-<div class="card"><h2>📖 1. Unseen – איך עונים נכון?</h2>
-<ol><li><b>קוראים קודם את השאלות</b>, כדי לדעת מה מחפשים.</li>
-<li>קוראים את <b>הכותרת</b> ומנחשים על מה הטקסט.</li>
-<li>קוראים את הטקסט ו<b>מסמנים מילות מפתח</b> מהשאלות.</li>
-<li>התשובה כמעט תמיד <b>כתובה בטקסט</b>. מעתיקים אותה בדיוק ולא ממציאים.</li>
-<li>בשאלת <b>True/False</b> מוצאים את המשפט שמוכיח את התשובה.</li>
-<li>בשאלה <b>"the word 'it' refers to"</b> מחפשים את שם העצם שמופיע <b>לפני</b> המילה it.</li></ol>
-<table><tr><th>מילת שאלה</th><th>פירוש</th><th>מה מחפשים בטקסט</th></tr>
-<tr><td class="en">Who</td><td>מי</td><td>אדם</td></tr><tr><td class="en">What</td><td>מה</td><td>דבר או פעולה</td></tr>
-<tr><td class="en">Where</td><td>איפה</td><td>מקום</td></tr><tr><td class="en">When / What time</td><td>מתי / באיזו שעה</td><td>זמן, יום, שעה</td></tr>
-<tr><td class="en">Why</td><td>למה</td><td>סיבה (because)</td></tr><tr><td class="en">How</td><td>איך</td><td>דרך, אמצעי</td></tr>
-<tr><td class="en">How many / How much</td><td>כמה (נספרים / לא נספרים)</td><td>מספר, מחיר</td></tr>
-<tr><td class="en">How often</td><td>באיזו תדירות</td><td>every day, twice a week</td></tr>
-<tr><td class="en">Which</td><td>איזה</td><td>בחירה מתוך כמה אפשרויות</td></tr></table></div>
-
-<div class="card"><h2>🔤 2. Vocabulary – איך לומדים מילים?</h2>
-<ul><li>לומדים ב<b>קבוצות</b> לפי סוג: Nouns, Verbs, Adjectives ועוד.</li>
-<li>משתמשים ב<b>כרטיסיות</b> (בלשונית "רשימת המילים") ומסמנים ✔ יודעת או ✘ עוד לא.</li>
-<li>לומדים את המילה <b>בתוך משפט</b>, לא רק את התרגום.</li>
-<li>שימי לב לצמדים: <span class="en">usual ↔ unusual</span>, <span class="en">dangerous → danger</span>, <span class="en">amaze → amazing</span>, <span class="en">fall → <b>fell</b> in love</span>, <span class="en">interested <b>in</b></span>, <span class="en">depend <b>on</b></span>.</li>
-<li>המילים ש"נכשלו" נשמרות אוטומטית ב<b>⭐ המילים הקשות שלי</b>.</li></ul></div>
-
-<div class="card"><h2>📝 3. Writing – פסקה על יום טיפוסי (עד 50 מילים)</h2>
-<div class="rule"><b>מבנה הפסקה:</b><br>① <b>משפט פתיחה:</b> <span class="en">On a typical day, I get up at 7:00.</span><br>
-② <b>גוף הפסקה:</b> 4–5 פעולות לפי סדר הזמן, עם <span class="en">First, Then, After that, After school, In the evening</span><br>
-③ <b>משפט סיום:</b> <span class="en">I usually go to sleep at 10:00.</span> / <span class="en">I love my typical day!</span></div>
-<table><tr><th>כלל</th><th>דוגמה</th></tr>
-<tr><td>Present Simple: I/you/we/they בלי s</td><td class="en">I get up · We go</td></tr>
-<tr><td>He/She/It: מוסיפים s או es</td><td class="en">She gets up · He goes · She watches</td></tr>
-<tr><td>at + שעה / night</td><td class="en">at 7:00 · at night</td></tr>
-<tr><td>in + the morning / afternoon / evening</td><td class="en">in the evening</td></tr>
-<tr><td>on + יום</td><td class="en">on Sunday</td></tr>
-<tr><td>always / usually / sometimes / never לפני הפועל</td><td class="en">I usually eat cereal.</td></tr>
-<tr><td>אות גדולה: בתחילת משפט, ב־I, בשמות ובימים</td><td class="en">On Sunday I meet Noa.</td></tr></table>
-<p><b>פעלים שימושיים:</b> <span class="en">wake up, get up, brush my teeth, comb my hair, eat breakfast, feed the dog, go to school, have lunch, do homework, play, help, go to sleep</span></p>
-<p><b>פסקאות לדוגמה:</b></p><div id="models"></div>
-<div class="tip">✅ <b>רשימת בדיקה לפני הגשה:</b> 35–50 מילים · אות גדולה ונקודה בכל משפט · ביטויי זמן · פעלים בהווה פשוט · 3 מילים או יותר מיחידה 1.</div></div>
-</section>
-
-<section id="vocab" class="hidden">
-<div class="card"><h2>🃏 כרטיסיות</h2><div class="row" style="justify-content:center"><button class="btn" onclick="startFlash('all')">כל המילים</button><button class="btn sec" onclick="startFlash('unknown')">רק מה שעוד לא יודעת</button><button class="btn red" onclick="startFlash('hard')">⭐ המילים הקשות שלי</button></div><div id="flash"></div></div>
-<div class="card"><h2>📋 רשימת המילים – Unit 1, p. 32</h2>
-<div class="row"><button class="btn sec" onclick="drawVocabTable('all')">הכול</button><button class="btn sec" onclick="drawVocabTable('n')">Nouns</button><button class="btn sec" onclick="drawVocabTable('v')">Verbs</button><button class="btn sec" onclick="drawVocabTable('a')">Adjectives</button><button class="btn sec" onclick="drawVocabTable('nv')">Nouns & Verbs</button><button class="btn sec" onclick="drawVocabTable('o')">Other</button></div>
-<div id="vtable"></div></div>
-</section>
-
-<section id="practice" class="hidden"><div class="card"><h2>✏️ דפי תרגול</h2><div id="pmenu"></div><div id="practiceArea"></div></div></section>
-<section id="test" class="hidden"><div class="card"><h2>📝 מבחנים</h2><p>שאלות אוצר המילים, הטקסט ונושא הכתיבה מוגרלים מחדש בכל מבחן. בציון הסופי השאלות שוות 80% והכתיבה 20%.</p><div class="tests" id="testMenu"></div><div id="testArea"></div></div></section>
-<section id="report" class="hidden"><div class="card"><h2>📊 הדוח שלי</h2><div id="reportArea"></div><button class="btn sec" onclick="if(confirm('לאפס את כל הנתונים?')){localStorage.removeItem('en7stats');renderReport()}">איפוס נתונים</button></div></section>
-</main>
-<script>
-/* ===== VOCABULARY – Unit 1, p.32 ===== */
-// w=word, h=hebrew, p=pos (n,v,a,nv,o), s=sentence with ___, a=answer in sentence (if differs), x=excluded distractors, g=confusable group
-const V=[
-{w:"activity",h:"פעילות",p:"n",s:"Swimming is my favorite summer ___."},
-{w:"band",h:"להקה",p:"n",s:"My brother plays the guitar in a rock ___."},
-{w:"bowl",h:"קערה",p:"n",s:"I eat a ___ of cereal every morning."},
-{w:"bridge",h:"גשר",p:"n",s:"We walked across the old ___ over the river."},
-{w:"choice",h:"בחירה",p:"n",s:"You can have pizza or pasta. It's your ___."},
-{w:"club",h:"מועדון, חוג",p:"n",s:"I go to the chess ___ every Monday.",x:["team"]},
-{w:"danger",h:"סכנה",p:"n",s:"The sign says: \"___! Don't swim here!\""},
-{w:"English",h:"אנגלית",p:"n",s:"We speak Hebrew at home and ___ in our English lessons."},
-{w:"form",h:"טופס",p:"n",s:"Please fill in this ___ with your name and address.",x:["list"]},
-{w:"geography",h:"גאוגרפיה",p:"n",s:"In ___ lessons we learn about rivers, mountains and countries."},
-{w:"guide",h:"מדריך",p:"n",s:"Our tour ___ showed us the old city."},
-{w:"history",h:"היסטוריה",p:"n",s:"In ___ lessons we learn about the past."},
-{w:"job",h:"עבודה, משרה",p:"n",g:"work",s:"My uncle is looking for a new ___ because he wants to earn more money."},
-{w:"journey",h:"מסע",p:"n",g:"trip",s:"The ___ from Tel Aviv to Eilat takes five hours."},
-{w:"lemon",h:"לימון",p:"n",s:"I like my tea with ___.",x:["salt","pepper","oil"]},
-{w:"list",h:"רשימה",p:"n",s:"Mom wrote a shopping ___ before we went to the supermarket."},
-{w:"math",h:"מתמטיקה",p:"n",s:"I am good at ___. I can solve problems with numbers very fast.",x:["physics","science"]},
-{w:"meal",h:"ארוחה",p:"n",s:"Breakfast is the most important ___ of the day."},
-{w:"mountain",h:"הר",p:"n",s:"Everest is the highest ___ in the world."},
-{w:"nation",h:"אומה, מדינה",p:"n",s:"Israel is a young ___. It was born in 1948."},
-{w:"office",h:"משרד",p:"n",s:"The principal is sitting at her desk in her ___."},
-{w:"oil",h:"שמן",p:"n",s:"Put some olive ___ on the salad."},
-{w:"pepper",h:"פלפל",p:"n",s:"Please pass me the salt and ___.",x:["oil","lemon"]},
-{w:"physics",h:"פיזיקה",p:"n",s:"In ___ we learn about energy, light and gravity.",x:["science"]},
-{w:"river",h:"נהר",p:"n",s:"The Jordan is a famous ___ in Israel."},
-{w:"salt",h:"מלח",p:"n",s:"The soup is not tasty. It needs more ___.",x:["pepper","oil","lemon"]},
-{w:"science",h:"מדע",p:"n",s:"Our ___ teacher showed us an experiment in the lab.",x:["physics","math"]},
-{w:"team",h:"קבוצה, צוות",p:"n",s:"Our football ___ won the game 3–1.",x:["club"]},
-{w:"theater",h:"תיאטרון",p:"n",s:"We saw a play at the ___ last night."},
-{w:"variety",h:"מגוון",p:"n",s:"The shop has a wide ___ of colors and sizes."},
-{w:"village",h:"כפר",p:"n",s:"My grandparents live in a small ___ in the north."},
-{w:"world",h:"עולם",p:"n",s:"There are about 195 countries in the ___."},
-{w:"writing",h:"כתיבה, כתב יד",p:"n",s:"Her ___ is very neat and easy to read."},
-{w:"brush",h:"מברשת / להבריש",p:"nv",s:"I ___ my teeth twice a day."},
-{w:"color",h:"צבע / לצבוע",p:"nv",s:"Let's ___ the picture with red and blue."},
-{w:"comb",h:"מסרק / לסרק",p:"nv",s:"I ___ my hair every morning.",x:["brush"]},
-{w:"drive",h:"נסיעה / לנהוג",p:"nv",g:"trip",s:"My sister is 18. She is learning to ___ a car.",x:["color","love","pay","fix"]},
-{w:"help",h:"עזרה / לעזור",p:"nv",s:"Can you ___ me with my homework, please?"},
-{w:"love",h:"אהבה / לאהוב",p:"nv",g:"love",s:"I ___ my family very much."},
-{w:"pay",h:"תשלום / לשלם",p:"nv",s:"How much did you ___ for your new shoes?"},
-{w:"point",h:"נקודה / להצביע",p:"nv",s:"It's not polite to ___ at people."},
-{w:"sleep",h:"שינה / לישון",p:"nv",s:"I ___ eight hours every night.",x:["work"]},
-{w:"travel",h:"נסיעה / לטייל, לנסוע",p:"nv",g:"trip",s:"I love to ___ to other countries."},
-{w:"work",h:"עבודה / לעבוד",p:"nv",g:"work",s:"My parents ___ in a big office in the city."},
-{w:"amaze",h:"להדהים",p:"v",s:"His magic tricks always ___ the children. They can't believe their eyes!"},
-{w:"continue",h:"להמשיך",p:"v",s:"After the break, we will ___ the lesson."},
-{w:"depend on",h:"להיות תלוי ב־, לסמוך על",p:"v",s:"Little children ___ their parents for everything."},
-{w:"fall (fell) in love",h:"להתאהב",p:"v",g:"love",s:"Romeo ___ in love with Juliet.",a:"fell"},
-{w:"feed",h:"להאכיל",p:"v",s:"Don't forget to ___ the dog. It's hungry!"},
-{w:"fill in",h:"למלא (טופס)",p:"v",s:"Please ___ the form with your name."},
-{w:"fix",h:"לתקן",p:"v",s:"My dad can ___ my broken bike."},
-{w:"follow",h:"ללכת אחרי, לעקוב",p:"v",s:"___ me! I know the way.",x:["join"]},
-{w:"imagine",h:"לדמיין",p:"v",s:"Close your eyes and ___ you are on a beach."},
-{w:"join",h:"להצטרף",p:"v",s:"Do you want to ___ our basketball team?"},
-{w:"open",h:"לפתוח",p:"v",s:"Please ___ your books to page 32."},
-{w:"prefer",h:"להעדיף",p:"v",s:"I ___ tea to coffee."},
-{w:"realize",h:"להבין, לקלוט",p:"v",s:"I didn't ___ it was so late! I must go home.",x:["imagine"]},
-{w:"receive",h:"לקבל",p:"v",s:"Did you ___ my email yesterday?",x:["open","fix","follow"]},
-{w:"serve",h:"להגיש (אוכל), לשרת",p:"v",s:"In this restaurant, they ___ fish and rice."},
-{w:"shake hands",h:"ללחוץ ידיים",p:"v",s:"When people meet for the first time, they often ___ hands.",a:"shake"},
-{w:"welcome",h:"לקבל בברכה, ברוך הבא",p:"v",s:"___ to our school! We are happy to see you."},
-{w:"amazing",h:"מדהים",p:"a",s:"Wow! The view from the top of the mountain is ___!",x:["lovely","wide","warm","unusual"]},
-{w:"careful",h:"זהיר",p:"a",s:"Be ___! The floor is wet."},
-{w:"certain",h:"בטוח, מסוים",p:"a",s:"Are you ___? – Yes, I'm sure."},
-{w:"dangerous",h:"מסוכן",p:"a",s:"Don't swim there. The sea is ___ today!"},
-{w:"foreign",h:"זר, לועזי",p:"a",s:"French and Spanish are ___ languages for me."},
-{w:"interested (in)",h:"מתעניין (ב־)",p:"a",s:"I am ___ in history. I read a lot about the past.",a:"interested"},
-{w:"lovely",h:"מקסים, נחמד",p:"a",s:"What a ___ dress! It's so pretty.",x:["amazing","unusual"]},
-{w:"main",h:"ראשי, עיקרי",p:"a",s:"The ___ idea of the text is in the first sentence."},
-{w:"possible",h:"אפשרי",p:"a",s:"Is it ___ to finish this project today?"},
-{w:"typical",h:"טיפוסי",p:"a",g:"usual",s:"On a ___ day, I wake up at seven and go to school."},
-{w:"unusual",h:"לא רגיל, חריג",p:"a",s:"Snow in Tel Aviv? That's very ___!"},
-{w:"usual",h:"רגיל, הרגיל",p:"a",g:"usual",s:"Let's meet at the ___ place, next to the café."},
-{w:"warm",h:"חם, חמים",p:"a",s:"Take a ___ coat. It's cold outside."},
-{w:"wide",h:"רחב",p:"a",s:"The river is very ___. You can't swim across it."},
-{w:"according to",h:"לפי, על פי",p:"o",s:"___ the weather report, it will rain tomorrow."},
-{w:"across",h:"מעבר ל־, מצד לצד",p:"o",s:"Their house is ___ the street from ours.",x:["next to"]},
-{w:"any",h:"כלשהו, בכלל",p:"o",g:"any",s:"Do you have ___ brothers or sisters?"},
-{w:"anybody",h:"מישהו, כל אחד",p:"o",g:"any",s:"Is ___ home? I can't hear a sound."},
-{w:"around here",h:"באזור הזה, כאן בסביבה",p:"o",s:"Excuse me, is there a supermarket ___?"},
-{w:"directly",h:"ישירות",p:"o",s:"Go ___ home after school. Don't stop anywhere!"},
-{w:"I'd love to",h:"אשמח מאוד, הייתי שמחה",p:"o",s:"\"Do you want to come to my party?\" \"Yes, ___!\""},
-{w:"next to",h:"ליד, סמוך ל־",p:"o",s:"The bank is ___ the post office.",x:["across"]},
-{w:"Nice to meet you.",h:"נעים להכיר.",p:"o",s:"\"Hi, I'm Dan.\" \"Hi Dan, I'm Maya. ___\""},
-{w:"What about ... ?",h:"מה לגבי ... ?",p:"o",s:"\"I love pizza. ___ you?\" \"Me too!\"",a:"What about"},
-{w:"would you like ... ?",h:"האם תרצה/תרצי ... ?",p:"o",s:"\"___ some tea?\" \"Yes, please.\"",a:"Would you like"}
-];
-const POS={n:"Noun – שם עצם",v:"Verb – פועל",a:"Adjective – שם תואר",nv:"Noun & Verb – שם עצם ופועל",o:"Other – ביטויים ומילים נוספות"};
-const OPP=[["usual","unusual"],["possible","impossible"],["open","close"],["receive","send"],["warm","cold"],["wide","narrow"],["dangerous","safe"],["love","hate"],["continue","stop"],["careful","careless"],["amazing","boring"],["lovely","ugly"],["foreign","local"],["certain","not sure"],["welcome","say goodbye"]];
-
-/* ===== UNSEEN PASSAGES (original texts) ===== */
-// q types: mc{o,a}, tf{a:true/false}, word{a:[accepted]}, open{k:[[alt words]...], need, model}
-const PASSAGES=[
-{id:"p1",lv:"easy",title:"Maya's Typical Day",text:`Hi! My name is Maya. I am twelve years old, and I live in a small village next to a river.
-
-On a typical day, I get up at 6:30. First, I brush my teeth and comb my hair. Then I feed my dog, Lucky. After that, I eat breakfast with my family. My usual breakfast is a bowl of cereal with milk.
-
-I go to school by bus. My favorite subjects are English and science. After school, I go to the drama club. I love the theater!
-
-In the evening, I do my homework and help my mom make dinner. I go to sleep at 10:00.`,qs:[
-{t:"mc",q:"Where does Maya live?",o:["In a village next to a river","In a big city","On a mountain","Next to the sea"],a:0},
-{t:"mc",q:"What does Maya do first in the morning?",o:["She feeds her dog.","She brushes her teeth and combs her hair.","She eats breakfast.","She goes to school."],a:1},
-{t:"tf",q:"Maya has a cat called Lucky.",a:false,why:"It says: \"I feed my dog, Lucky.\""},
-{t:"tf",q:"Maya goes to school by bus.",a:true,why:"It says: \"I go to school by bus.\""},
-{t:"mc",q:"What is Maya's usual breakfast?",o:["Eggs and bread","A bowl of cereal with milk","A salad","Nothing"],a:1},
-{t:"mc",q:"Which club does Maya go to after school?",o:["Science club","Chess club","Drama club","Football club"],a:2},
-{t:"word",q:"Find a word in the text that means \"קערה\".",a:["bowl"]},
-{t:"word",q:"Find a word in the text that means \"טיפוסי\".",a:["typical"]},
-{t:"open",q:"What does Maya do in the evening? (Answer in English)",k:[["homework"],["help","helps"],["dinner"]],need:2,model:"She does her homework and helps her mom make dinner."}
-]},
-{id:"p6",lv:"easy",title:"Welcome to the Science Club!",text:`WELCOME TO THE SCIENCE CLUB!
-
-Do you like science? Are you interested in physics, animals or the world around you? Join the Science Club!
-
-When: Every Monday and Wednesday, 15:00–16:30
-Where: Room 12, next to the library
-What we do: experiments, trips to the river and the mountains, science games
-Price: It's free! You don't need to pay.
-How to join: Fill in the form and give it to Mr. Cohen.
-
-Remember: Be careful in the lab! Always follow the teacher's instructions.
-
-Anybody from 7th to 9th grade can join. We'd love to see you!`,qs:[
-{t:"mc",q:"How many days a week does the club meet?",o:["One","Two","Three","Every day"],a:1},
-{t:"mc",q:"Where is Room 12?",o:["Next to the library","Next to the office","Next to the river","Across the street"],a:0},
-{t:"mc",q:"How much does the club cost?",o:["10 shekels","It depends on the trip","Nothing – it's free","50 shekels a month"],a:2},
-{t:"tf",q:"The club goes on trips to the sea.",a:false,why:"The trips are to the river and the mountains."},
-{t:"tf",q:"Students in 8th grade can join the club.",a:true,why:"Anybody from 7th to 9th grade can join."},
-{t:"mc",q:"What do you need to do to join?",o:["Pay Mr. Cohen","Fill in a form and give it to Mr. Cohen","Pass a science test","Go to the library"],a:1},
-{t:"mc",q:"What must students do in the lab?",o:["Be careful and follow the instructions","Play games","Eat and drink","Work alone"],a:0},
-{t:"word",q:"Find a word in the text that means \"מתעניין\".",a:["interested"]},
-{t:"word",q:"Find a word in the text that means \"להצטרף\".",a:["join"]}
-]},
-{id:"p7",lv:"easy",title:"A Plan for Saturday (Dialogue)",text:`Dana: Hi Ben! This is my cousin, Lior. He's from Haifa.
-Ben: Hi Lior! Nice to meet you.
-Lior: Nice to meet you, too.
-Dana: Ben, would you like to come to the beach with us on Saturday?
-Ben: I'd love to! What time?
-Dana: At 9:00 in the morning. My dad can drive us.
-Ben: Great. What about lunch? Can I bring sandwiches?
-Dana: Yes, please! And bring a warm sweater. According to the weather report, the evening will be cold.
-Ben: OK. Is there a shop around here? I need to buy a bowl for the salad.
-Lior: Yes, there's a small shop next to the bank, across the street.`,qs:[
-{t:"mc",q:"Who is Lior?",o:["Dana's brother","Dana's cousin","Ben's friend","Dana's dad"],a:1},
-{t:"mc",q:"Where is Lior from?",o:["Tel Aviv","Eilat","Haifa","Jerusalem"],a:2},
-{t:"mc",q:"How will they get to the beach?",o:["By bus","Dana's dad will drive them","They will walk","By train"],a:1},
-{t:"tf",q:"They are going to the beach on Saturday at 9:00 in the evening.",a:false,why:"They are going at 9:00 in the morning."},
-{t:"mc",q:"Why does Dana tell Ben to bring a warm sweater?",o:["Because it will rain","Because the evening will be cold","Because the sea is cold","Because Ben is sick"],a:1},
-{t:"tf",q:"The shop is next to the bank.",a:true,why:"Lior says: \"there's a small shop next to the bank\"."},
-{t:"mc",q:"What does Ben want to buy?",o:["Sandwiches","A sweater","A bowl","A drink"],a:2},
-{t:"word",q:"Find the words in the text that mean \"אשמח מאוד\".",a:["i'd love to","i would love to"]},
-{t:"open",q:"What will Ben bring for lunch? (Answer in English)",k:[["sandwich","sandwiches"]],need:1,model:"He will bring sandwiches."}
-]},
-{id:"p2",lv:"medium",title:"The Mountain Guide",text:`Daniel is a mountain guide in a village in the north of Italy. His job is not usual.
-
-On a typical day, he gets up very early, at 5:00 in the morning. He eats a big meal because the journey up the mountain is long. Then he meets a team of tourists from many foreign countries.
-
-Before they start, Daniel shakes hands with everybody and says, "Nice to meet you!" He tells them to be careful, because the mountain can be dangerous. "You must always follow me," he says. "Don't walk across the river alone."
-
-The journey takes about six hours. At the top, the view is amazing. The tourists can see the whole valley and a wide river.
-
-Daniel loves his job. "I fell in love with the mountains when I was a child," he says. "I can't imagine a different job."`,qs:[
-{t:"mc",q:"What is Daniel's job?",o:["He is a teacher.","He is a mountain guide.","He is a tourist.","He is a cook."],a:1},
-{t:"tf",q:"Daniel gets up at 6:00 in the morning.",a:false,why:"He gets up at 5:00."},
-{t:"mc",q:"Why does Daniel eat a big meal?",o:["Because he is always hungry","Because the journey up the mountain is long","Because the tourists cook for him","Because it is his birthday"],a:1},
-{t:"mc",q:"Where do the tourists come from?",o:["From Daniel's village","From many foreign countries","Only from Israel","From the north of Italy"],a:1},
-{t:"mc",q:"Why must the tourists be careful?",o:["The mountain can be dangerous.","The food is not good.","Daniel is angry.","The river is dirty."],a:0},
-{t:"mc",q:"How long does the journey take?",o:["About two hours","About four hours","About six hours","All day and night"],a:2},
-{t:"word",q:"Find a word in the text that means \"not from your country\".",a:["foreign"]},
-{t:"word",q:"Find a word in the text that is the opposite of \"safe\".",a:["dangerous"]},
-{t:"open",q:"Why does Daniel love his job? (Answer in English)",k:[["love","loved","fell"],["mountain","mountains"],["child","young","kid"]],need:2,model:"Because he fell in love with the mountains when he was a child."}
-]},
-{id:"p3",lv:"medium",title:"The Cooking Club",text:`Every Tuesday, a group of students at Green Hill School meet in the school kitchen. It is the Cooking Club. The club has twelve members, and anybody can join. To join, you need to fill in a form and give it to the teacher, Mrs. Levi.
-
-According to Mrs. Levi, cooking is a great activity for kids. "You learn math, science and even history in the kitchen," she says.
-
-Every week, the students cook a meal from a different nation. Last week, they made a Greek salad with lemon, salt, pepper and olive oil. This week, they are making pasta from Italy. At the end of each meeting, the students serve the food to their teachers.
-
-"The variety of food is amazing," says Tom, a student in the club. "I prefer cooking to playing computer games!"`,qs:[
-{t:"mc",q:"When does the Cooking Club meet?",o:["Every day","Every Tuesday","Every weekend","Once a month"],a:1},
-{t:"tf",q:"Only students who are good cooks can join the club.",a:false,why:"It says: \"anybody can join\"."},
-{t:"mc",q:"How can a student join the club?",o:["Cook a meal for Mrs. Levi","Fill in a form and give it to Mrs. Levi","Pay money","Ask Tom"],a:1},
-{t:"mc",q:"According to Mrs. Levi, what can you learn in the kitchen?",o:["Only cooking","Math, science and history","English and geography","Music"],a:1},
-{t:"mc",q:"What did the students make last week?",o:["Pasta from Italy","A Greek salad","A cake","Soup"],a:1},
-{t:"mc",q:"Who eats the food at the end of each meeting?",o:["The students' parents","Mrs. Levi only","The teachers","Nobody"],a:2},
-{t:"tf",q:"Tom likes computer games more than cooking.",a:false,why:"Tom says: \"I prefer cooking to playing computer games!\""},
-{t:"word",q:"Find a word in the text that means \"מגוון\".",a:["variety"]},
-{t:"word",q:"Find the words in the text that mean \"לפי\".",a:["according to"]},
-{t:"open",q:"What do the students do at the end of each meeting? (Answer in English)",k:[["serve","serves","give"],["food"],["teacher","teachers"]],need:2,model:"They serve the food to their teachers."}
-]},
-{id:"p8",lv:"medium",title:"Rivers of the World",text:`Rivers are very important to every nation in the world. People use rivers for water, food and travel.
-
-The longest river in the world is the Nile, in Africa. It is about 6,650 kilometers long! The Amazon River in South America is not as long, but it is the widest river in the world. In some places, it is more than 40 kilometers wide. There are no bridges across most of the Amazon, so people travel by boat.
-
-Many animals live in rivers and next to them. Some of them, like crocodiles, are dangerous, so people must be careful.
-
-In geography lessons, students learn that big cities often grow next to rivers. For example, London is on the River Thames, and Paris is on the River Seine. Can you imagine a world without rivers? It isn't possible!`,qs:[
-{t:"mc",q:"Why are rivers important, according to the text?",o:["For water, food and travel","Only for swimming","For building bridges","For crocodiles"],a:0},
-{t:"mc",q:"Which is the longest river in the world?",o:["The Amazon","The Nile","The Thames","The Jordan"],a:1},
-{t:"tf",q:"The Amazon is longer than the Nile.",a:false,why:"The Amazon is not as long as the Nile, but it is the widest."},
-{t:"mc",q:"Why do people travel by boat on the Amazon?",o:["Because it is fun","Because there are no bridges across most of it","Because there are no roads in Africa","Because boats are cheap"],a:1},
-{t:"mc",q:"Why must people be careful near rivers?",o:["Some animals are dangerous.","The water is cold.","Rivers are very wide.","Boats are slow."],a:0},
-{t:"mc",q:"Which city is on the River Seine?",o:["London","Paris","Cairo","Rome"],a:1},
-{t:"word",q:"Find a word in the text that means \"הרחב ביותר\".",a:["widest"]},
-{t:"word",q:"Find a word in the text that means \"אומה, מדינה\".",a:["nation"]},
-{t:"open",q:"Where do big cities often grow? (Answer in English)",k:[["next","near","on"],["river","rivers"]],need:2,model:"Big cities often grow next to rivers."}
-]},
-{id:"p4",lv:"hard",title:"A Letter from Japan",text:`Dear Noa,
-
-Thank you for your letter. I was amazed to receive it! I'd love to tell you about my life here in Japan.
-
-I live in Kyoto, an old city with many temples. My usual day is very busy. I get up at 6:00, and I eat a typical Japanese breakfast: rice, fish and soup. I don't eat cereal like you! School starts at 8:30. My main subjects are math, physics and geography. I also study English, of course – it's my favorite foreign language.
-
-After school, I don't go home directly. I am a member of the school band, and I play the drums. We practice every day except Sunday. Sometimes I'm tired, but I realize that music makes me happy.
-
-On weekends, my family and I travel around here. There is a lovely river near our home with an old wooden bridge.
-
-What about you? Would you like to visit Japan one day? It's possible that my family will visit Israel next summer!
-
-Write soon,
-Kenji`,qs:[
-{t:"mc",q:"Why did Kenji write this letter?",o:["To answer Noa's letter","To invite Noa to a concert","To ask for help with English","To tell Noa about a trip to Israel"],a:0},
-{t:"mc",q:"What is a typical Japanese breakfast, according to Kenji?",o:["Cereal and milk","Rice, fish and soup","Eggs and bread","Pasta"],a:1},
-{t:"tf",q:"Kenji eats cereal for breakfast, like Noa.",a:false,why:"He says: \"I don't eat cereal like you!\""},
-{t:"mc",q:"Which subject is NOT one of Kenji's main subjects?",o:["Math","Physics","History","Geography"],a:2},
-{t:"mc",q:"\"After school, I don't go home directly.\" This means that Kenji…",o:["goes home very fast","goes somewhere else before he goes home","never goes home","goes home by bus"],a:1},
-{t:"mc",q:"How often does the band practice?",o:["Once a week","Only on Sundays","Six days a week","Twice a week"],a:2},
-{t:"mc",q:"In the sentence \"it's my favorite foreign language\", the word \"it\" refers to…",o:["Japan","English","school","the letter"],a:1},
-{t:"word",q:"Find a word in the text that means \"מקסים\".",a:["lovely"]},
-{t:"word",q:"Find a word in the text that means \"ישירות\".",a:["directly"]},
-{t:"open",q:"What may happen next summer? (Answer in English)",k:[["visit","come"],["israel"],["family","kenji"]],need:2,model:"Kenji's family may visit Israel next summer."}
-]},
-{id:"p5",lv:"hard",title:"The Boy Who Fixed Bikes",text:`When Omar was ten years old, he received an old bike from his grandfather. It was broken, and nobody in his village could fix it. Omar didn't want a new bike – he wanted that bike.
-
-So he watched videos and read guides on the internet. After two weeks of hard work, the bike was ready. Omar realized that he loved fixing things. Soon, his friends started to bring him their broken bikes.
-
-Today, Omar is fourteen. He has a small "bike office" in his family's garage. He opens it every afternoon after school. He doesn't ask anybody to pay money – he asks for help with his homework instead! "My business depends on my friends," he says with a smile.
-
-Omar's parents are proud of him, but they want him to continue his studies. "Fixing bikes is a lovely hobby," says his mother, "but school comes first." Omar agrees. His dream is to study physics and to build bikes for the whole world.`,qs:[
-{t:"mc",q:"Who gave Omar the old bike?",o:["His father","His friend","His grandfather","His teacher"],a:2},
-{t:"mc",q:"How did Omar learn to fix the bike?",o:["His grandfather taught him.","He watched videos and read guides on the internet.","He went to a bike club.","He asked his teacher."],a:1},
-{t:"tf",q:"Omar fixed the bike in one day.",a:false,why:"It took him two weeks of hard work."},
-{t:"mc",q:"What does Omar ask for when he fixes his friends' bikes?",o:["Money","Help with his homework","A new bike","Nothing at all"],a:1},
-{t:"mc",q:"In the sentence \"He opens it every afternoon\", the word \"it\" refers to…",o:["the bike","the bike office","the school","the village"],a:1},
-{t:"mc",q:"What do Omar's parents want?",o:["That he will stop fixing bikes","That he will continue his studies","That he will open a big shop","That he will move to another village"],a:1},
-{t:"tf",q:"Omar's dream is to study physics.",a:true,why:"His dream is to study physics and to build bikes for the whole world."},
-{t:"word",q:"Find the words in the text that mean \"תלוי ב־\".",a:["depends on","depend on"]},
-{t:"word",q:"Find a word in the text that means \"קיבל\".",a:["received"]},
-{t:"open",q:"Why are Omar's friends important to his business? (Answer in English)",k:[["bring","brings","bikes","bike"],["depend","depends"],["help","homework"]],need:1,model:"Because they bring him their broken bikes and help him with his homework. His business depends on them."}
-]}
-];
-
-/* ===== WRITING SKILLS (grammar for the paragraph) ===== */
-const PS=[["get up","gets up"],["brush","brushes"],["go","goes"],["eat","eats"],["watch","watches"],["do","does"],["play","plays"],["study","studies"],["feed","feeds"],["comb","combs"],["have","has"],["wake up","wakes up"]];
-const PSREST={"get up":"at 7:00 every day","brush":"my teeth in the morning","go":"to school by bus","eat":"a bowl of cereal for breakfast","watch":"TV in the evening","do":"homework after school","play":"football on Fridays","study":"English every day","feed":"the dog after school","comb":"my hair every morning","have":"lunch at 13:00","wake up":"at 6:30"};
-const SUBJ1=["I","You","We","They","My friends"],SUBJ3=["He","She","My mom","Tom","My sister"];
-const PREP=[["I wake up ___ 7:00.","at"],["I do my homework ___ the afternoon.","in"],["We go to the club ___ Sunday.","on"],["I go to sleep ___ night.","at"],["I watch TV ___ the evening.","in"],["I visit my grandma ___ Friday.","on"],["School starts ___ 8:00.","at"],["I eat breakfast ___ the morning.","in"]];
-const CONN=[["First, I wake up. ___, I brush my teeth.","Then",["Then","Because","But"]],["I am tired ___ I go to sleep late.","because",["because","then","first"]],["I like math, ___ I don't like physics.","but",["but","because","first"]],["I eat breakfast. ___ that, I go to school.","After",["After","Because","But"]],["___, I go to sleep at 10:00.","Finally",["Finally","Because","But"]],["I brush my teeth ___ comb my hair.","and",["and","because","but"]]];
-const QW=[["___ do you get up? – At 7:00.","When"],["___ do you live? – In a small village.","Where"],["___ do you go to school? – By bus.","How"],["___ is your English teacher? – Mrs. Levi.","Who"],["___ do you like science? – Because it's interesting.","Why"],["___ do you go to the club? – Twice a week.","How often"],["___ do you eat for breakfast? – Cereal.","What"],["___ brothers do you have? – Two.","How many"]];
-const CAPS=[["On Sunday I go to the club.","On sunday i go to the club.","on Sunday I go to the club"],["My name is Noa and I live in Afula.","my name is noa and I live in afula.","My name is Noa and i live in afula"],["I usually eat a bowl of cereal.","I eat usually a bowl of cereal.","Usually I eats a bowl of cereal."],["She always feeds the dog.","She always feed the dog.","She feeds always the dog."],["I never go to sleep late.","I go never to sleep late.","I never goes to sleep late."],["On a typical day, I get up at 7:00.","On a typical day, I gets up at 7:00.","on a typical day i get up at 7:00"]];
-
-/* ===== WRITING PROMPTS ===== */
-const PROMPTS=[
-{id:"w1",t:"My Typical Day",h:"כתבי פסקה (עד 50 מילים) על היום הטיפוסי שלך: מתי את קמה, מה את עושה בבוקר, בבית הספר, אחרי הצהריים ובערב.",third:false},
-{id:"w2",t:"My Typical School Day",h:"כתבי פסקה (עד 50 מילים) על יום טיפוסי בבית הספר: איך את מגיעה, אילו מקצועות יש לך, מה את אוהבת ומה את עושה בהפסקה.",third:false},
-{id:"w3",t:"My Weekend",h:"כתבי פסקה (עד 50 מילים) על יום שישי או שבת טיפוסיים אצלך.",third:false},
-{id:"w4",t:"A Typical Day of Someone in My Family",h:"כתבי פסקה (עד 50 מילים) על יום טיפוסי של אמא, אבא, אח או אחות. ⚠️ בגוף שלישי צריך להוסיף s לפועל: She gets up, He goes.",third:true}
-];
-const MODELS=[
-{t:"My Typical Day (דוגמה)",p:"On a typical day, I get up at 7:00. First, I brush my teeth and comb my hair. Then I eat a bowl of cereal. I go to school at 7:45. After school, I go to the dance club. In the evening, I do my homework. I usually go to sleep at 10:00."},
-{t:"My Mom's Typical Day (דוגמה – גוף שלישי)",p:"On a typical day, my mom gets up at 6:00. First, she feeds our dog. Then she drives to her office. She works there until 16:00. After that, she helps me with my homework. In the evening, she cooks a lovely meal for the family. She goes to sleep at 11:00."}
-];
-const R=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
-const pick=a=>a[Math.floor(Math.random()*a.length)];
-const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=R(0,i);[a[i],a[j]]=[a[j],a[i]]}return a};
-const E=s=>`<span class="en">${s}</span>`;
-const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-const LEVELS={easy:"קל",medium:"בינוני",hard:"מאתגר"};
-const SEC={vocab:"אוצר מילים",unseen:"הבנת הנקרא (Unseen)",skills:"דקדוק לכתיבה",writing:"כתיבה"};
-const ADVICE={vocab:"חזרי על רשימת המילים בעמוד 32 בכרטיסיות. כדאי לתרגל במיוחד את רשימת \"המילים הקשות שלי\" בדוח.",
-unseen:"קודם קוראים את השאלות, ואחר כך את הטקסט. מסמנים מילות מפתח ומחפשים את התשובה בטקסט. בשאלות נכון/לא נכון צריך למצוא משפט שמוכיח את התשובה.",
-skills:"זכרי: I/you/we/they go, אבל he/she goes. עם שעה משתמשים ב־at, עם חלקי היום ב־in, ועם ימים ב־on. כל משפט מתחיל באות גדולה ומסתיים בנקודה.",
-writing:"השתמשי במבנה: משפט פתיחה, פעולות לפי סדר הזמן (First, Then, After that), ומשפט סיום. כתבי בין 35 ל־50 מילים."};
-const say=t=>{try{const u=new SpeechSynthesisUtterance(t.replace(/\(.*?\)|\.\.\./g,''));u.lang='en-US';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}};
-const norm=s=>(s||'').toLowerCase().replace(/[’‘`]/g,"'").replace(/[.!?,"]/g,' ').replace(/\s+/g,' ').trim();
-
-/* ---------- vocab question generators ---------- */
-function distract(v,n,samePos,useSentence){let pool=V.filter(o=>o!==v&&(!v.g||o.g!==v.g)&&!(v.x||[]).includes(o.w)&&!(v.x||[]).includes(o.a));
- if(samePos){const sp=pool.filter(o=>o.p===v.p);if(sp.length>=n)pool=sp}
- if(useSentence)pool=pool.filter(o=>!(o.x||[]).includes(v.w));
- return shuffle(pool).slice(0,n)}
-const fillAns=v=>v.a||v.w;
-const VG={
- en2he:v=>{const o=shuffle([v,...distract(v,3)]);return{type:'mc',text:`מה פירוש המילה ${E('<b>'+v.w+'</b>')} ? <button class="spk" onclick="say('${v.w.replace(/'/g,"\\'")}')">🔊</button>`,opts:o.map(x=>x.h),ans:o.indexOf(v),ex:`${v.w} = ${v.h}`,word:v.w}},
- he2en:v=>{const o=shuffle([v,...distract(v,3,true)]);return{type:'mc',text:`איך אומרים באנגלית <b>"${v.h}"</b>?`,opts:o.map(x=>E(x.w)),ans:o.indexOf(v),ex:`${v.h} = ${E(v.w)}`,word:v.w}},
- pos:v=>{const m={n:0,v:1,a:2};return{type:'mc',text:`איזה חלק דיבר היא המילה ${E('<b>'+v.w+'</b>')}?`,opts:['Noun – שם עצם','Verb – פועל','Adjective – שם תואר'],ans:m[v.p],ex:`${E(v.w)} (${v.h}) הוא ${POS[v.p]}`,word:v.w,only:['n','v','a']}},
- fillmc:v=>{const d=distract(v,3,true,true);const o=shuffle([v,...d]);return{type:'mc',text:`בחרי את המילה המתאימה:<div class="sent">${v.s.replace('___','<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>')}</div>`,opts:o.map(x=>E(fillAns(x))),ans:o.indexOf(v),ex:`${E(v.s.replace('___','<b>'+fillAns(v)+'</b>'))} (${v.w} = ${v.h})`,word:v.w}},
- filltype:v=>({type:'text',text:`השלימי את המילה החסרה (רמז: <b>${v.h}</b>):<div class="sent">${v.s.replace('___','<u>&nbsp;&nbsp;?&nbsp;&nbsp;</u>')}</div>`,acc:[fillAns(v)],ex:E(v.s.replace('___','<b>'+fillAns(v)+'</b>')),word:v.w,wide:true}),
- spell:v=>({type:'text',text:`כתבי באנגלית: <b>"${v.h}"</b> <span class="small">(${POS[v.p].split('–')[0]})</span> <button class="spk" onclick="say('${v.w.replace(/'/g,"\\'")}')">🔊 רמז קולי</button>`,acc:[v.w,v.w.replace(/\s*\(.*?\)/g,''),v.w.replace(/[.?]/g,'').replace(/\s*\.\.\.\s*/,' ').trim()],ex:`${v.h} = ${E(v.w)}`,word:v.w,wide:true}),
- opp:()=>{const p=pick(OPP);const others=shuffle(OPP.filter(x=>x!==p)).slice(0,3).map(x=>x[1]);const o=shuffle([p[1],...others]);return{type:'mc',text:`מה ההפך של ${E('<b>'+p[0]+'</b>')}?`,opts:o.map(E),ans:o.indexOf(p[1]),ex:`${E(p[0])} ↔ ${E(p[1])}`,word:p[0]}}
-};
-const VPLAN={easy:['en2he','en2he','he2en','pos'],medium:['fillmc','fillmc','he2en','opp','en2he'],hard:['filltype','spell','fillmc','opp']};
-function vocabQ(level,word){const kind=pick(VPLAN[level]);let v=word||pick(V);
- if(kind==='pos'&&!['n','v','a'].includes(v.p))v=pick(V.filter(x=>['n','v','a'].includes(x.p)));
- const q=VG[kind](v);q.sec='vocab';q.level=level;return q}
-function vocabSet(level,n,words){const ws=words?shuffle(words):shuffle(V);const out=[];for(let i=0;i<n;i++)out.push(vocabQ(level,ws[i%ws.length]));return out}
-
-/* ---------- grammar/skills ---------- */
-const ING={'get up':'getting up',brush:'brushing',go:'going',eat:'eating',watch:'watching',do:'doing',play:'playing',study:'studying',feed:'feeding',comb:'combing',have:'having','wake up':'waking up'};
-const SG=[
- ()=>{const third=Math.random()<.5;const s=pick(third?SUBJ3:SUBJ1);const v=pick(PS);const POSS={I:'my',You:'your',We:'our',They:'their','My friends':'their',He:'his',Tom:'his',She:'her','My mom':'her','My sister':'her'};
-  const rest=PSREST[v[0]].replace(/\bmy\b/,POSS[s]);const o=shuffle([v[0],v[1],ING[v[0]]]);const right=third?v[1]:v[0];
-  return{type:'mc',text:`השלימי (Present Simple):<div class="sent">${s} ___ ${rest}.</div>`,opts:o.map(E),ans:o.indexOf(right),ex:`${third?'He/She/It: מוסיפים s/es לפועל':'I/You/We/They: הפועל בלי s'} → ${E(s+' <b>'+right+'</b> '+rest+'.')}`}},
- ()=>{const p=pick(PREP);const o=['at','in','on'];return{type:'mc',text:`השלימי את מילת היחס:<div class="sent">${p[0]}</div>`,opts:o.map(E),ans:o.indexOf(p[1]),ex:`at + שעה/night · in + the morning/afternoon/evening · on + יום. ${E(p[0].replace('___','<b>'+p[1]+'</b>'))}`}},
- ()=>{const c=pick(CONN);const o=shuffle(c[2]);return{type:'mc',text:`השלימי את מילת הקישור:<div class="sent">${c[0]}</div>`,opts:o.map(E),ans:o.indexOf(c[1]),ex:E(c[0].replace('___','<b>'+c[1]+'</b>'))}},
- ()=>{const q=pick(QW);const o=shuffle([q[1],...shuffle(QW.filter(x=>x!==q)).slice(0,3).map(x=>x[1])]);return{type:'mc',text:`איזו מילת שאלה מתאימה?<div class="sent">${q[0]}</div>`,opts:o.map(E),ans:o.indexOf(q[1]),ex:E(q[0].replace('___','<b>'+q[1]+'</b>'))}},
- ()=>{const c=pick(CAPS);const o=shuffle(c);return{type:'mc',text:`איזה משפט כתוב <b>נכון</b>?`,opts:o.map(E),ans:o.indexOf(c[0]),ex:`המשפט הנכון: ${E(c[0])}. שימי לב: אות גדולה בתחילת משפט, בשמות, בימים וב־I. בגוף שלישי מוסיפים s, ומילים כמו usually/always/never באות לפני הפועל.`}}
-];
-function skillsSet(n){return Array.from({length:n},(_,i)=>{const q=SG[i%SG.length]();q.sec='skills';q.level='medium';return q}).sort(()=>Math.random()-.5)}
-
-/* ---------- unseen ---------- */
-function unseenQs(p){return p.qs.map(q=>{const o={sec:'unseen',level:p.lv,pid:p.id};
- if(q.t==='mc')return{...o,type:'mc',text:E(q.q),opts:q.o.map(E),ans:q.a,ex:`התשובה: ${E(q.o[q.a])}`};
- if(q.t==='tf')return{...o,type:'mc',text:`True or False? ${E(q.q)}`,opts:[E('True – נכון'),E('False – לא נכון')],ans:q.a?0:1,ex:E(q.why)};
- if(q.t==='word')return{...o,type:'text',text:E(q.q),acc:q.a,ex:`התשובה: ${E(q.a[0])}`,wide:true};
- return{...o,type:'open',text:E(q.q),k:q.k,need:q.need,ex:`תשובה לדוגמה: ${E(q.model)}`}})}
-function passageHTML(p){return `<div class="passage"><div class="ptitle">${p.title} <button class="spk" onclick="say(PASSAGES.find(x=>x.id==='${p.id}').text)">🔊 הקראה</button></div>${esc(p.text).replace(/\n/g,'<br>')}</div>`}
-
-/* ---------- rendering & checking ---------- */
-function renderQs(list,cont,prefix,startNum=1){list.forEach((q,i)=>{const id=prefix+(startNum-1+i);q._id=id;let inp='';
- if(q.type==='text')inp=`<input type="text" class="en-in ${q.wide?'wide':''}" id="${id}" autocomplete="off" spellcheck="false">`;
- else if(q.type==='open')inp=`<textarea class="en-in" id="${id}" rows="2" spellcheck="false" placeholder="Write your answer in English..."></textarea>`;
- else inp=q.opts.map((o,k)=>`<label><input type="radio" name="${id}" value="${k}"> ${o}</label>`).join('');
- const d=document.createElement('div');d.className='q';d.id='box'+id;
- d.innerHTML=`<div><span class="num">${startNum+i}.</span> <span class="lv ${q.level}">${LEVELS[q.level]||''}</span> ${q.text}</div><div class="ans">${inp}</div><div class="fb" id="fb${id}"></div>`;cont.appendChild(d)})}
-function answered(q,id){if(q.type==='mc')return!!document.querySelector(`input[name="${id}"]:checked`);return document.getElementById(id).value.trim()!==''}
-function check(q,id){let ok=false,right='';
- if(q.type==='mc'){const s=document.querySelector(`input[name="${id}"]:checked`);ok=!!s&&+s.value===q.ans;right=q.opts[q.ans]}
- else if(q.type==='text'){const v=norm(document.getElementById(id).value);ok=q.acc.some(a=>norm(a)===v);right=E(q.acc[0])}
- else{const v=' '+norm(document.getElementById(id).value)+' ';const hits=q.k.filter(alts=>alts.some(w=>v.includes(' '+w)||v.includes(w+' '))).length;ok=hits>=q.need;right=''}
- document.getElementById('box'+id).className='q '+(ok?'ok':'bad');const fb=document.getElementById('fb'+id);fb.className='fb '+(ok?'ok':'bad');
- const given=answered(q,id);
- fb.innerHTML=ok?`✅ נכון! <span class="ex">${q.ex}</span>`:`❌ ${given?'':'לא נענתה. '}${right?'התשובה הנכונה: '+right:'התשובה לא מספיק מלאה.'}<span class="ex">💡 ${q.ex}</span>`;
- if(q.type==='open'&&ok)fb.innerHTML+=`<span class="ex small">(הבדיקה בשאלה פתוחה היא אוטומטית לפי מילות מפתח. כדאי להשוות לתשובה לדוגמה.)</span>`;
- return ok}
-
-/* ---------- stats ---------- */
-function stats(){return JSON.parse(localStorage.getItem('en7stats')||'{"sec":{},"lv":{},"tests":[],"miss":{},"writing":[],"known":{}}')}
-function saveStats(s){localStorage.setItem('en7stats',JSON.stringify(s))}
-function record(list,res,testName,grade){const s=stats();list.forEach((q,i)=>{const a=s.sec[q.sec]=s.sec[q.sec]||[0,0];a[1]++;if(res[i])a[0]++;
- if(q.level){const k=q.sec+'_'+q.level,b=s.lv[k]=s.lv[k]||[0,0];b[1]++;if(res[i])b[0]++}
- if(q.word){if(!res[i])s.miss[q.word]=(s.miss[q.word]||0)+1;else if(s.miss[q.word]){s.miss[q.word]--;if(!s.miss[q.word])delete s.miss[q.word]}}});
- if(testName)s.tests.push({n:testName,d:new Date().toLocaleString('he-IL'),g:grade});saveStats(s)}
-function summary(list,res){const by={};list.forEach((q,i)=>{by[q.sec]=by[q.sec]||[0,0];by[q.sec][1]++;if(res[i])by[q.sec][0]++});return by}
-function table(by){let h='<table><tr><th>חלק</th><th>תוצאה</th><th>התקדמות</th><th>המלצה</th></tr>';
- for(const t in SEC){if(!by[t])continue;const[c,n]=by[t],p=Math.round(100*c/n),col=p>=85?'#16a34a':p>=60?'#eab308':'#dc2626';
- h+=`<tr><td>${SEC[t]}</td><td>${c}/${n}</td><td><div class="bar"><div style="width:${p}%;background:${col}"></div></div>${p}%</td><td style="text-align:right">${p>=85?'🌟 מצוין':p>=60?'👍 טוב, כדאי עוד תרגול. '+ADVICE[t]:'💪 צריך לחזק! '+ADVICE[t]}</td></tr>`}
- return h+'</table>'}
-function missedWords(){const s=stats();return V.filter(v=>s.miss[v.w])}
-
-/* ---------- writing checker ---------- */
-const UNITW=V.map(v=>v.w.toLowerCase().replace(/\s*\(.*?\)/g,'').replace(/[.?]/g,'').replace('...','').trim()).filter(w=>w.length>1&&w!=='any'&&w!=='english');
-const ROUTINE=['wake up','wakes up','get up','gets up','brush','brushes','comb','combs','eat','eats','have','has','go','goes','take','takes','do','does','play','plays','read','reads','watch','watches','help','helps','feed','feeds','sleep','sleeps','come','comes','walk','walks','study','studies','meet','meets','drive','drives','work','works','cook','cooks','ride','rides','listen','listens','practice','practices','return','returns','drink','drinks','start','starts','finish','finishes','dance','dances','swim','swims','like','likes','love','loves'];
-const BASE3=['go','get','eat','have','do','play','watch','brush','comb','feed','take','help','work','drive','sleep','read','come','walk','study','cook','wake','like','love','start','finish','meet'];
-const TIMEX=[/\bat \d{1,2}(:\d\d)?\b/g,/\bin the (morning|afternoon|evening)\b/g,/\bat night\b/g,/\bfirst\b/g,/\bthen\b/g,/\bafter that\b/g,/\bafter school\b/g,/\bfinally\b/g,/\bevery (day|morning|evening|week)\b/g,/\bon (a )?typical day\b/g,/\bon (sunday|monday|tuesday|wednesday|thursday|friday|saturday)s?\b/g,/\bbefore\b/g,/\bnext\b/g,/\blater\b/g];
-const FREQ=/\b(always|usually|often|sometimes|never)\b/g;
-const CONNW=/\b(and|then|but|because|so|also|after that)\b/g;
-const PAST=/\b(woke|went|ate|had|did|played|watched|got|came|slept|brushed|helped|fed)\b/;
-function checkWriting(txt,third){const words=(txt.match(/[A-Za-z']+/g)||[]);const n=words.length;const low=' '+txt.toLowerCase().replace(/\s+/g,' ')+' ';const items=[];let score=0;
- // 1 length
- let p1=n>=35&&n<=50?20:n>=25&&n<35?13:n>50&&n<=60?13:n>0?6:0;score+=p1;
- items.push([p1===20,`אורך: ${n} מילים`,p1===20?'מצוין, האורך בטווח 35–50 מילים.':n>50?'יש יותר מ־50 מילים. המורה ביקשה עד 50, אז כדאי לקצר.':'קצר מדי. כדאי להוסיף עוד פעולות במהלך היום (מטרה: 35–50 מילים).',p1,20]);
- // 2 caps & punctuation
- const sents=txt.split(/(?<=[.!?])\s+/).map(s=>s.trim()).filter(Boolean);const badCap=sents.filter(s=>/^[a-z]/.test(s)).length;const lowI=(txt.match(/(^|[^A-Za-z'])i([^A-Za-z]|$)/g)||[]).length;const endP=/[.!?]\s*$/.test(txt.trim());
- const days=(txt.match(/\b(sunday|monday|tuesday|wednesday|thursday|friday|saturday)\b/g)||[]).length;
- let p2=15-badCap*3-(lowI?4:0)-(endP?0:3)-(days?2:0);p2=Math.max(0,n?p2:0);score+=p2;
- const capMsg=[];if(badCap)capMsg.push(`${badCap} משפטים מתחילים באות קטנה`);if(lowI)capMsg.push('המילה I צריכה תמיד להיכתב באות גדולה');if(!endP)capMsg.push('חסרה נקודה בסוף');if(days)capMsg.push('שמות ימים נכתבים באות גדולה (Sunday)');
- items.push([p2>=13,'אותיות גדולות וסימני פיסוק',capMsg.length?capMsg.join(' · '):`מצוין. כל ${sents.length} המשפטים כתובים נכון.`,p2,15]);
- // 3 time order
- let tc=0;TIMEX.forEach(r=>{tc+=(low.match(r)||[]).length});const p3=tc>=4?20:tc===3?16:tc===2?11:tc===1?6:0;score+=p3;
- items.push([p3>=16,`ביטויי זמן וסדר (${tc})`,p3>=16?'מצוין, היום מתואר לפי סדר הזמן.':'הוסיפי ביטויים כמו: at 7:00, in the morning, First, Then, After that, In the evening, Finally.',p3,20]);
- // 4 present simple & verbs
- const verbs=new Set(ROUTINE.filter(v=>low.includes(' '+v+' ')));let p4=verbs.size>=5?20:verbs.size>=3?14:verbs.size>=1?7:0;const errs=[];
- if(!third){const m=txt.match(/\bI (goes|gets|eats|has|does|plays|watches|brushes|combs|feeds|takes|helps|works|sleeps|likes|loves|wakes|starts|reads|comes|walks|studies|cooks)\b/g);if(m){errs.push('אחרי I לא מוסיפים s: '+m.join(', '));p4-=4}}
- else{const re=new RegExp(`\\b(he|she|it|my (?:mom|mother|dad|father|brother|sister|grandma|grandpa)) (${BASE3.join('|')})\\b`,'gi');const m=txt.match(re);if(m){errs.push('בגוף שלישי צריך להוסיף s לפועל: '+m.join(', '));p4-=Math.min(8,m.length*3)}}
- if(PAST.test(low)){errs.push('יש פעלים בזמן עבר. ביום טיפוסי כותבים בזמן הווה פשוט (Present Simple)');p4-=3}
- p4=Math.max(0,p4);score+=p4;
- items.push([p4>=14&&!errs.length,`פעלים בהווה פשוט (${verbs.size} פעלים שונים)`,(errs.length?errs.join(' · '):'')+(verbs.size<5?(errs.length?' · ':'')+'הוסיפי עוד פעולות: get up, brush, eat, go, play, do homework, feed, sleep.':(errs.length?'':'מצוין!')),p4,20]);
- // 5 connectors + frequency
- const cn=(low.match(CONNW)||[]).length,fq=(low.match(FREQ)||[]).length;const p5=Math.min(10,cn*2+fq*3);score+=p5;
- items.push([p5>=8,`מילות קישור ותדירות (${cn+fq})`,p5>=8?'מצוין!':'הוסיפי and, but, because, also, ומילים כמו usually, always, sometimes.',p5,10]);
- // 6 unit vocab
- const used=UNITW.filter(w=>new RegExp('\\b'+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(s|es|ed)?\\b','i').test(txt));const p6=used.length>=4?15:used.length*4;score+=Math.min(15,p6);
- items.push([used.length>=3,`מילים מיחידה 1 (${used.length})`,used.length?'השתמשת ב: '+used.map(E).join(', '):'שלבי מילים מהיחידה: typical, usual, meal, bowl, feed, brush, comb, club, team, help, sleep, work.',Math.min(15,p6),15]);
- return{score:Math.min(100,score),items,n,used}}
-function writingBox(id,prompt){return `<div class="wbox"><div class="wprompt"><b>${E(prompt.t)}</b><div>${prompt.h}</div></div>
- <textarea id="${id}" class="en-in" rows="7" spellcheck="false" placeholder="Write your paragraph here..." oninput="document.getElementById('${id}c').textContent=(this.value.match(/[A-Za-z']+/g)||[]).length"></textarea>
- <div class="small">מספר מילים: <b id="${id}c">0</b> / 50</div><div id="${id}r"></div></div>`}
-function showWritingResult(id,third){const txt=document.getElementById(id).value;const r=checkWriting(txt,third);
- let h=`<div class="score">ציון כתיבה משוער: ${r.score}/100 ${r.score>=85?'🌟':r.score>=70?'👍':'💪'}</div><table><tr><th></th><th>קריטריון</th><th>משוב</th><th>נקודות</th></tr>`;
- r.items.forEach(it=>h+=`<tr><td>${it[0]?'✅':'⚠️'}</td><td>${it[1]}</td><td style="text-align:right">${it[2]}</td><td>${it[3]}/${it[4]}</td></tr>`);
- h+=`</table><div class="tip small">הבדיקה האוטומטית בודקת מבנה, דקדוק בסיסי ושימוש במילים, אבל לא כל טעות כתיב או משמעות. מומלץ שמבוגר יקרא את הפסקה, או להשוות לפסקאות לדוגמה בלשונית ההסברים.</div>`;
- document.getElementById(id+'r').innerHTML=h;return r}
-/* ---------- LEARN ---------- */
-function drawVocabTable(f='all'){const cats=f==='all'?Object.keys(POS):[f];let h='';
- cats.forEach(c=>{h+=`<h4>${POS[c]}</h4><table class="vt"><tr><th>English</th><th>עברית</th><th>דוגמה</th><th>🔊</th></tr>`+V.filter(v=>v.p===c).map(v=>`<tr><td class="en"><b>${v.w}</b></td><td>${v.h}</td><td class="en small" style="text-align:left">${v.s.replace('___','<b>'+fillAns(v)+'</b>')}</td><td><button class="spk" onclick="say('${v.w.replace(/'/g,"\\'")}')">🔊</button></td></tr>`).join('')+'</table>'});
- document.getElementById('vtable').innerHTML=h}
-let fc=[],fci=0,fcFlip=false;
-function startFlash(mode){const s=stats();fc=mode==='hard'?missedWords():mode==='unknown'?V.filter(v=>!s.known[v.w]):[...V];if(!fc.length){alert(mode==='hard'?'אין עדיין מילים קשות. כל הכבוד! 🎉':'סימנת את כל המילים כ"יודעת"! 🎉');return}fc=shuffle(fc);fci=0;fcFlip=false;drawFlash()}
-function drawFlash(){const v=fc[fci],s=stats();document.getElementById('flash').innerHTML=`<div class="fcard" onclick="fcFlip=!fcFlip;drawFlash()">${fcFlip?`<div style="font-size:1.6em">${v.h}</div><div class="en small">${v.s.replace('___','<b>'+fillAns(v)+'</b>')}</div>`:`<div class="en" style="font-size:2em;font-weight:700">${v.w}</div><div class="small">${POS[v.p].split('–')[0]} · לחצי כדי להפוך</div>`}</div>
- <div class="row" style="justify-content:center"><button class="btn sec" onclick="fci=(fci-1+fc.length)%fc.length;fcFlip=false;drawFlash()">→ הקודם</button><button class="btn" onclick="say('${v.w.replace(/'/g,"\\'")}')">🔊</button>
- <button class="btn green" onclick="markKnown(true)">✔ יודעת</button><button class="btn red" onclick="markKnown(false)">✘ עוד לא</button><button class="btn sec" onclick="fci=(fci+1)%fc.length;fcFlip=false;drawFlash()">הבא ←</button></div>
- <div class="small" style="text-align:center">${fci+1} / ${fc.length} · יודעת: ${Object.keys(s.known).length} מתוך ${V.length}</div>`}
-function markKnown(k){const s=stats();if(k)s.known[fc[fci].w]=1;else{delete s.known[fc[fci].w];s.miss[fc[fci].w]=(s.miss[fc[fci].w]||0)+1}saveStats(s);fci=(fci+1)%fc.length;fcFlip=false;drawFlash()}
-
-/* ---------- PRACTICE ---------- */
-let cur=null,curTitle='',curKind='',curPassage=null,vLevel='easy';
-function practiceMenu(){document.getElementById('pmenu').innerHTML=`
- <div class="pm"><h3>📚 אוצר מילים – יחידה 1</h3><div class="row">${Object.entries(LEVELS).map(([k,v])=>`<button class="btn lvb ${k}" onclick="newVocab('${k}')">${v}</button>`).join('')}<button class="btn" style="background:#7c3aed" onclick="newVocab('mix')">🎯 מדורג</button><button class="btn red" onclick="newVocab('miss')">⭐ המילים הקשות שלי</button></div>
- <div class="small">קל: תרגום מאנגלית לעברית ומעברית לאנגלית · בינוני: השלמת משפטים והפכים · מאתגר: כתיבת מילים והשלמה בלי אפשרויות בחירה</div></div>
- <div class="pm"><h3>📖 הבנת הנקרא (Unseen)</h3><div class="row">${PASSAGES.map(p=>`<button class="btn lvb ${p.lv}" onclick="newUnseen('${p.id}')">${p.title} · ${LEVELS[p.lv]}</button>`).join('')}</div></div>
- <div class="pm"><h3>✍️ דקדוק לכתיבה</h3><button class="btn" onclick="newSkills()">דף תרגול (10 שאלות)</button><div class="small">Present Simple · at/in/on · מילות קישור · מילות שאלה · אותיות גדולות</div></div>
- <div class="pm"><h3>📝 סדנת כתיבה</h3><div class="row">${PROMPTS.map(p=>`<button class="btn" style="background:#0e7490" onclick="newWriting('${p.id}')">${p.t}</button>`).join('')}</div></div>`}
-function newVocab(l){let qs;if(l==='miss'){const m=missedWords();if(!m.length){alert('עדיין אין מילים קשות. קודם צריך לתרגל! 😊');return}qs=m.slice(0,10).flatMap(w=>[vocabQ(pick(['medium','hard']),w)]);while(qs.length<10)qs.push(vocabQ(pick(['easy','medium','hard']),pick(m)));curTitle='⭐ תרגול המילים הקשות שלי'}
- else if(l==='mix'){qs=[...vocabSet('easy',4),...vocabSet('medium',4),...vocabSet('hard',4)];curTitle='אוצר מילים – מדורג'}else{qs=vocabSet(l,10);curTitle='אוצר מילים – רמה: '+LEVELS[l]}
- vLevel=l;cur=qs;curKind='vocab';curPassage=null;showSheet()}
-function newUnseen(id){curPassage=PASSAGES.find(p=>p.id===id);cur=unseenQs(curPassage);curTitle='Unseen: '+curPassage.title;curKind='unseen';showSheet()}
-function newSkills(){cur=skillsSet(10);curTitle='דקדוק לכתיבה';curKind='skills';curPassage=null;showSheet()}
-function showSheet(){const a=document.getElementById('practiceArea');
- a.innerHTML=`<h3>${curTitle}</h3>${curPassage?'<div class="tip small">💡 טיפ: קראי קודם את השאלות, ואחר כך את הטקסט.</div>'+passageHTML(curPassage):''}<div id="pq"></div><button class="btn green" onclick="checkPractice()">✔️ בדיקה</button>${curKind!=='unseen'?`<button class="btn sec" onclick="${curKind==='vocab'?`newVocab('${vLevel}')`:'newSkills()'}">🔄 דף חדש</button>`:''}<div id="pres"></div>`;
- renderQs(cur,document.getElementById('pq'),'p');a.scrollIntoView({behavior:'smooth'})}
-function checkPractice(){const res=cur.map(q=>check(q,q._id));const c=res.filter(Boolean).length;record(cur,res);const p=c/cur.length;
- let next='';if(curKind==='vocab'&&p>=.8&&(vLevel==='easy'||vLevel==='medium')){const nl=vLevel==='easy'?'medium':'hard';next=`<button class="btn" onclick="newVocab('${nl}')">⬆️ לרמה הבאה: ${LEVELS[nl]}</button>`}
- if(curKind==='unseen'){const nx=PASSAGES[(PASSAGES.indexOf(curPassage)+1)%PASSAGES.length];next=`<button class="btn" onclick="newUnseen('${nx.id}')">📖 לטקסט הבא: ${nx.title}</button>`}
- document.getElementById('pres').innerHTML=`<div class="score">${c} מתוך ${cur.length} ${c===cur.length?'🏆 Perfect!':p>=.7?'👏 Well done!':'💪 Keep practicing!'}</div>${next}`+table(summary(cur,res));document.getElementById('pres').scrollIntoView({behavior:'smooth'})}
-function newWriting(id){const p=PROMPTS.find(x=>x.id===id);curKind='writing';
- document.getElementById('practiceArea').innerHTML=`<h3>📝 סדנת כתיבה</h3>
- <div class="tip small"><b>מבנה מומלץ:</b> (1) משפט פתיחה: <span class="en">On a typical day, ...</span> (2) 4–5 פעולות לפי סדר: <span class="en">First, Then, After that, In the evening</span> (3) משפט סיום: <span class="en">I love my day because...</span></div>
- ${writingBox('pw',p)}<button class="btn green" onclick="const r=showWritingResult('pw',${p.third});saveWriting('${p.t}',r.score)">✔️ בדיקת הפסקה</button>
- <button class="btn sec" onclick="document.getElementById('pmodel').classList.toggle('hidden')">👀 הצג פסקה לדוגמה</button>
- <div id="pmodel" class="hidden">${MODELS.map(m=>`<div class="passage"><div class="ptitle">${m.t}</div>${m.p}</div>`).join('')}</div>`;
- document.getElementById('practiceArea').scrollIntoView({behavior:'smooth'})}
-function saveWriting(t,sc){const s=stats();s.writing.push({t,sc,d:new Date().toLocaleString('he-IL')});saveStats(s)}
-
-/* ---------- TESTS ---------- */
-const TESTS=[
- {id:'A',n:'מבחן א – בסיס',d:'טקסט Unseen קל, 10 שאלות אוצר מילים ופסקה',pl:['easy'],voc:{easy:6,medium:4},w:true},
- {id:'B',n:'מבחן ב – בינוני',d:'Unseen בינוני, 12 שאלות אוצר מילים ופסקה. ברמה של מבחן רגיל.',pl:['medium'],voc:{easy:3,medium:6,hard:3},w:true},
- {id:'C',n:'מבחן ג – מתקדם',d:'Unseen מאתגר, 12 שאלות אוצר מילים ופסקה',pl:['hard'],voc:{medium:5,hard:7},w:true},
- {id:'S',n:'סימולציה ⏱️',d:'מבנה המבחן האמיתי (Unseen, אוצר מילים וכתיבה) עם שעון של 45 דקות',pl:['medium','hard'],voc:{easy:2,medium:6,hard:4},w:true,timer:45},
- {id:'V',n:'בוחן מילים ⚡',d:'20 שאלות על כל רשימת המילים, בערך 10 דקות',voc:{easy:6,medium:8,hard:6},timer:10},
- {id:'U',n:'מרתון Unseen 📖',d:'2 טקסטים ברצף, אחד בינוני ואחד מאתגר',pl:['medium','hard'],two:true}];
-let test=null,tdef=null,tInt=null,tPassages=[],tPrompt=null;
-function drawTestMenu(){document.getElementById('testMenu').innerHTML=TESTS.map(t=>`<div class="tcard" onclick="startTest('${t.id}')"><b>${t.n}</b><div class="small">${t.d}</div></div>`).join('')}
-function startTest(id){tdef=TESTS.find(t=>t.id===id);clearInterval(tInt);tPassages=[];
- if(tdef.pl){if(tdef.two)tdef.pl.forEach(l=>tPassages.push(pick(PASSAGES.filter(p=>p.lv===l))));else tPassages.push(pick(PASSAGES.filter(p=>tdef.pl.includes(p.lv))))}
- const ws=shuffle(V);let wk=0;const vq=Object.entries(tdef.voc||{}).flatMap(([l,n])=>Array.from({length:n},()=>vocabQ(l,ws[wk++%ws.length])));
- tPrompt=tdef.w?pick(PROMPTS):null;
- const a=document.getElementById('testArea');a.innerHTML=`<h3>${tdef.n} ${tdef.timer?'· נותר: <span id="timer"></span>':''}</h3>`;test=[];let num=1,part=0;
- tPassages.forEach((p,pi)=>{const qs=unseenQs(p);a.insertAdjacentHTML('beforeend',`<h3 class="part">Part ${'ABCD'[part++]} – Unseen</h3>${passageHTML(p)}<div id="tu${pi}"></div>`);renderQs(qs,document.getElementById('tu'+pi),'t',num);num+=qs.length;test.push(...qs)});
- if(vq.length){a.insertAdjacentHTML('beforeend',`<h3 class="part">Part ${'ABCD'[part++]} – Vocabulary</h3><div id="tv"></div>`);renderQs(vq,document.getElementById('tv'),'t',num);test.push(...vq)}
- if(tPrompt)a.insertAdjacentHTML('beforeend',`<h3 class="part">Part ${'ABCD'[part++]} – Writing</h3>${writingBox('tw',tPrompt)}`);
- a.insertAdjacentHTML('beforeend',`<button class="btn green" onclick="submitTest()">📤 הגשת המבחן</button><div id="tres"></div>`);
- if(tdef.timer){let sec=tdef.timer*60;const tick=()=>{const el=document.getElementById('timer');if(!el){clearInterval(tInt);return}el.textContent=`${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}`;if(sec--<=0){clearInterval(tInt);alert('⏰ הזמן נגמר! המבחן מוגש.');submitTest(true)}};tick();tInt=setInterval(tick,1000)}
- a.scrollIntoView({behavior:'smooth'})}
-
-function submitTest(force){const un=test.filter(q=>!answered(q,q._id)).length;
- if(!force&&un&&!confirm(`יש ${un} שאלות שלא נענו. להגיש בכל זאת?`))return;clearInterval(tInt);
- const res=test.map(q=>check(q,q._id));const c=res.filter(Boolean).length;let g=Math.round(100*c/test.length);const by=summary(test,res);let wr=null,wline='';
- if(tPrompt){wr=showWritingResult('tw',tPrompt.third);saveWriting(tPrompt.t,wr.score);const objPart=Math.round(80*c/test.length);g=objPart+Math.round(wr.score*.2);wline=`<div class="small" style="text-align:center">שאלות: ${c}/${test.length} (80%) · כתיבה: ${wr.score}/100 (20%)</div>`;by.writing=[wr.score,100]}
- record(test,res,tdef.n,g);
- const weak=Object.keys(by).filter(t=>by[t][0]/by[t][1]<.75);const idx=TESTS.indexOf(tdef);
- const nxt=g>=80&&idx<2?`<button class="btn" onclick="startTest('${TESTS[idx+1].id}')">⬆️ למבחן הבא: ${TESTS[idx+1].n}</button>`:'';
- document.getElementById('tres').innerHTML=`<div class="card"><div class="score">הציון שלך: ${g} ${g>=90?'🏆':g>=75?'👏':'💪'}</div>${wline}${table(by)}
- <div class="rule" style="margin-top:12px"><b>מה הלאה?</b><br>${weak.length?'כדאי לחזק את: <b>'+weak.map(t=>SEC[t]).join(', ')+'</b>.':'מצוין! אפשר לנסות מבחן ברמה גבוהה יותר 😊'}<br>אפשר לגלול למעלה ולראות הסבר לכל שאלה.</div>
- ${missedWords().length?'<button class="btn red" onclick="goPractice();newVocab(\'miss\')">⭐ תרגול המילים הקשות שלי</button>':''}${nxt}<button class="btn sec" onclick="startTest('${tdef.id}')">🔄 מבחן חדש מאותו סוג</button></div>`;
- document.getElementById('tres').scrollIntoView({behavior:'smooth'})}
-function goPractice(){document.querySelector('nav button[data-t=practice]').click()}
-
-/* ---------- REPORT ---------- */
-function renderReport(){const s=stats();let h='<h3>הצלחה לפי חלק</h3>'+(Object.keys(s.sec).length?table(s.sec):'<p>עדיין אין נתונים.</p>');
- h+='<h3>הצלחה לפי רמה</h3><table><tr><th>חלק</th>'+Object.values(LEVELS).map(v=>`<th>${v}</th>`).join('')+'</tr>'+['vocab','unseen'].map(t=>`<tr><td>${SEC[t]}</td>`+Object.keys(LEVELS).map(l=>{const a=s.lv[t+'_'+l];if(!a)return'<td class="small">—</td>';const p=Math.round(100*a[0]/a[1]);return`<td style="color:${p>=85?'#16a34a':p>=60?'#ca8a04':'#dc2626'};font-weight:700">${p}% <span class="small">(${a[0]}/${a[1]})</span></td>`}).join('')+'</tr>').join('')+'</table>';
- const m=missedWords();h+=`<h3>⭐ המילים הקשות שלי (${m.length})</h3>`+(m.length?`<div class="chips">${m.map(v=>`<span class="chip"><b class="en">${v.w}</b> = ${v.h}</span>`).join('')}</div><button class="btn red" onclick="goPractice();newVocab('miss')">תרגול המילים האלה</button>`:'<p>אין כרגע מילים קשות 🎉</p>');
- h+=`<h3>כרטיסיות: יודעת ${Object.keys(s.known).length} מתוך ${V.length} מילים</h3><div class="bar"><div style="width:${100*Object.keys(s.known).length/V.length}%;background:#16a34a"></div></div>`;
- h+='<h3>פסקאות שנכתבו</h3>'+(s.writing.length?'<table><tr><th>#</th><th>נושא</th><th>תאריך</th><th>ציון משוער</th></tr>'+s.writing.map((w,i)=>`<tr><td>${i+1}</td><td class="en">${w.t}</td><td>${w.d}</td><td><b>${w.sc}</b></td></tr>`).join('')+'</table>':'<p>עדיין לא נכתבו פסקאות.</p>');
- h+='<h3>היסטוריית מבחנים</h3>'+(s.tests.length?'<table><tr><th>#</th><th>מבחן</th><th>תאריך</th><th>ציון</th></tr>'+s.tests.map((t,i)=>`<tr><td>${i+1}</td><td>${t.n}</td><td>${t.d}</td><td><b>${t.g}</b></td></tr>`).join('')+'</table>':'<p>עדיין לא נעשה מבחן.</p>');
- document.getElementById('reportArea').innerHTML=h}
-
-document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');
- ['learn','vocab','practice','test','report'].forEach(s=>document.getElementById(s).classList.toggle('hidden',s!==b.dataset.t));if(b.dataset.t==='report')renderReport();window.scrollTo(0,0)});
-drawVocabTable();practiceMenu();drawTestMenu();
-document.getElementById('models').innerHTML=MODELS.map(m=>`<div class="passage"><div class="ptitle">${m.t}</div>${m.p}</div>`).join('');
+﻿<!doctype html><html lang="he" dir="rtl"><head><meta name="ms-sp-authoring-source" content="agent"><style data-sp-site-theme>:root{--colorBrandBackground:#0078d4;--colorBrandBackgroundHover:#106ebe;--colorBrandBackground2:#eff6fc;--colorBrandForeground1:#0078d4;--colorNeutralForeground1:#323130;--colorNeutralForeground2:#605e5c;--colorNeutralForegroundOnBrand:#ffffff;--colorNeutralBackground1:#ffffff;--colorNeutralBackground2:#faf9f8;--colorNeutralStroke1:#d2d0ce;--fontFamily:'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;}</style><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>מדעים כיתה ז - הכנה למבחן</title><style>
+:root{--p:#176b87;--p2:#38a3a5;--g:#198754;--r:#d9485f;--bg:#f3f8fa;--ink:#18323b;--mut:#64748b}*{box-sizing:border-box}body{margin:0;font:16px Arial,sans-serif;background:var(--bg);color:var(--ink)}header{padding:18px;text-align:center;color:#fff;background:linear-gradient(120deg,var(--p),#2541b2)}header h1{margin:0 0 5px}nav{position:sticky;top:0;z-index:5;display:flex;gap:7px;overflow:auto;padding:9px;background:#fff;box-shadow:0 2px 9px #0001}nav button,.btn{border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}nav button{white-space:nowrap;background:#e8f4f7}nav button.on{background:var(--p);color:#fff}.btn{background:var(--p);color:#fff}.btn.g{background:var(--g)}.btn.gray{background:#707b86}main{max-width:950px;margin:auto;padding:12px}.page{display:none}.page.on{display:block}.card{background:#fff;border-radius:15px;padding:16px;margin:12px 0;box-shadow:0 2px 9px #00000012}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px}.level{padding:16px;border:2px solid #dce5e9;border-radius:13px;text-align:center;cursor:pointer}.level.sel{border-color:var(--p);background:#e7f7fa}.instruction{padding:10px;border-radius:10px;background:#eaf4ff;border:1px solid #bdd8f1;margin-bottom:10px;font-weight:700}.q{border-right:5px solid #cbd5e1}.q.ok{border-color:var(--g);background:#effbf5}.q.bad{border-color:var(--r);background:#fff1f3}label.opt{display:block;border:1px solid #e2e8f0;padding:9px;border-radius:9px;margin:6px 0}input[type=text]{width:min(100%,500px);padding:9px;font-size:16px;border:1px solid #aab7c0;border-radius:8px}.fb{display:none;margin-top:8px;padding:9px;border-radius:8px;background:#fff8d8}.tip{background:#edf9ef;border-right:4px solid var(--g);padding:10px;border-radius:8px}.warn{background:#fff6e6;border-right:4px solid #f59f00;padding:10px;border-radius:8px}.formula{direction:ltr;text-align:center;font-size:20px;font-weight:bold;background:#f1f5f9;padding:10px;border-radius:10px}table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #e2e8f0;padding:8px;text-align:center}.bar{height:9px;background:#e2e8f0;border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--g)}.small{font-size:14px;color:var(--mut)}h2{color:#184e77}h3{color:#22577a}@media(max-width:520px){header h1{font-size:22px}.card{padding:12px}nav button{font-size:13px}}</style></head><body><header><h1>🔬 הכנה למבחן במדעים - כיתה ז'</h1><div>גוף • חקר • מסה • נפח | גרסה סופית • מבוסס על "חוקרים חומר ואנרגיה א'"</div></header><nav id="nav"></nav><main id="main"></main><script>
+const TOPICS=['גוף וחומר','חקר מדעי','מסה','נפח'];let level=1,current=[],history=[],storageOK=false;try{history=JSON.parse(window.localStorage.getItem('sci7hist')||'[]');if(!Array.isArray(history))history=[];storageOK=true}catch(e){history=[]}const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],pick=a=>a[Math.floor(Math.random()*a.length)],shuffle=a=>[...a].sort(()=>Math.random()-.5),norm=s=>String(s||'').trim().replace(/\s+/g,' ');
+const BANK={
+'גוף וחומר':[
+['mc','מהו גוף?','כל דבר שתופס מקום בחלל',['כל דבר שתופס מקום בחלל','רק חפץ מוצק','רק חומר טבעי','רק יצור חי'],'גוף יכול להיות חי או דומם, מוצק, נוזל ואף גז, כל עוד מתייחסים לכמות שתופסת מקום.'],
+['mc','איזו רשימה מכילה רק גופים?','כוס מים, מסמר, בלון אוויר',['כוס מים, מסמר, בלון אוויר','ברזל, פלסטיק, מים','קשיות, נפח, מסה','זכוכית, עץ, חמצן'],'גוף הוא כמות מסוימת של חומר שתופסת מקום; חומר הוא מה שממנו עשויים גופים.'],
+['mc','איזו תכונה מאפיינת גוף ותלויה בכמותו?','מסה',['מסה','מוליכות חשמלית','צפיפות','קשיות'],'מסה ונפח הן תכונות של גוף; תכונות חומר כמו צפיפות, קשיות ומוליכות אינן תלויות בכמות החומר.'],
+['mc','כיסא עץ הוא...', 'גוף העשוי מחומר',['חומר בלבד','גוף העשוי מחומר','יחידת מידה','מכשיר מדידה'],'הכיסא הוא הגוף, והעץ הוא החומר.'] ],
+'חקר מדעי':[
+['mc','תרגול בסגנון החוברת: מדוע יחידת אורך המבוססת על אורך האמה של אדם אינה מדויקת ואחידה?','אורך האמה שונה מאדם לאדם',['האמה משתנה לפי מזג האוויר','אורך האמה שונה מאדם לאדם','אי אפשר למדוד אורך בגוף','אורך נמדד רק במטרים שלמים'],'מדידה מדעית צריכה להיות אובייקטיבית וביחידות אחידות שאינן תלויות במודד.'],
+['mc','תרגול בסגנון החוברת: תלמידה חוזרת על אותה מדידה בתנאים זהים ומקבלת תוצאות קרובות מאוד. מה הדבר מחזק?','את אמינות המדידה',['את גודל הגוף','את יחידת המידה','את אמינות המדידה','את ההשערה בהכרח'],'חזרות עם תוצאות דומות מחזקות את אמינות המדידה ומקטינות חשש לתוצאה מקרית.'],
+['mc','מהו הסדר המתאים לתהליך חקר מדעי?','שאלה → השערה → תכנון וביצוע ניסוי → תוצאות → מסקנה',['שאלה → השערה → תכנון וביצוע ניסוי → תוצאות → מסקנה','מסקנה → שאלה → תוצאה → ניסוי','ניסוי → מסקנה → השערה → שאלה','תוצאות → שאלה → מסקנה → ניסוי'],'בחקר מתחילים בשאלה הניתנת לבדיקה, מעלים השערה, מתכננים ובודקים, אוספים תוצאות ומסיקים מסקנה.'],
+['mc','בניסוי בודקים כיצד טמפרטורת המים משפיעה על זמן התמוססות הסוכר. מהו הגורם המשפיע?','טמפרטורת המים',['טמפרטורת המים','זמן ההתמוססות','כמות הסוכר שהתמוססה','המסקנה'],'הגורם המשפיע הוא המשתנה שהחוקר משנה במכוון.'],
+['mc','באותו ניסוי, מהו הגורם המושפע?','זמן ההתמוססות',['זמן ההתמוססות','טמפרטורת המים','סוג הכוס','כמות המים הקבועה'],'הגורם המושפע הוא התוצאה שאותה מודדים בעקבות שינוי הגורם המשפיע.'],
+['mc','למה חשוב לשמור גורמים קבועים בניסוי?','כדי שנוכל לייחס את השינוי לגורם המשפיע',['כדי שנוכל לייחס את השינוי לגורם המשפיע','כדי שהניסוי יהיה קצר יותר','כדי שלא יהיה צורך במדידה','כדי להוכיח תמיד שההשערה נכונה'],'בידוד משתנים מאפשר בדיקה הוגנת של הקשר בין המשפיע למושפע.'],
+['mc','מדוע חוזרים על מדידה או ניסוי כמה פעמים?','כדי לצמצם השפעה של מקריות ולהגדיל אמינות',['כדי לצמצם השפעה של מקריות ולהגדיל אמינות','כדי לשנות את ההשערה','כדי לקבל תשובות שונות','כי חובה שהמדידות יהיו זהות לחלוטין'],'חזרות מסייעות לוודא שהתוצאה אינה מקרית.'] ],
+'מסה':[
+['mc','תרגול בסגנון החוברת: גוף מאוזן במאזני כפות מול גופי מדידה של 10 גרם, 5 גרם ו-1 גרם. מה מסת הגוף?','16 גרם',['6 גרם','15 גרם','16 גרם','50 גרם'],'במצב איזון מסת הגוף שווה לסכום גופי המדידה: 10+5+1 = 16 גרם.'],
+['mc','תרגול בסגנון החוברת: תכשיט זהב הותך ועוצב מחדש בלי לאבד חומר. מה קרה למסתו?','המסה נשארה זהה',['המסה גדלה','המסה קטנה','המסה נשארה זהה','אי אפשר לדעת'],'שינוי הצורה אינו משנה את כמות החומר כל עוד חומר לא נוסף ולא אבד.'],
+['mc','תרגול בסגנון החוברת: בקבוק עם תרופה מונח על מאזניים ומראה 55 גרם. האם זה בהכרח מסת התרופה?','לא, זו מסת התרופה והבקבוק יחד',['כן, תמיד','לא, זו מסת התרופה והבקבוק יחד','לא, זו יחידת נפח','כן, כי לבקבוק אין מסה'],'כדי למצוא את מסת התרופה בלבד צריך להפחית את מסת הבקבוק הריק או לאפס את המאזניים עם הכלי.'],
+['mc','מהי מסה?','כמות החומר בגוף',['כמות החומר בגוף','המקום שהגוף תופס','כוח המשיכה על הגוף','הצפיפות של הגוף'],'מסה היא תכונה המציינת את כמות החומר בגוף.'],
+['mc','באיזה מכשיר מודדים מסה?','מאזניים',['מאזניים','משורה','סרגל','מדחום'],'מסה נמדדת באמצעות מאזניים.'],
+['mc','איזו יחידה מתאימה למדידת מסה?','גרם',['גרם','מיליליטר','סמ״ק','ליטר'],'יחידות מסה מקובלות: מיליגרם, גרם וקילוגרם.'],
+['mc','כדור פלסטלינה שמסתו 20 גרם חולק ל-4 כדורים. מה המסה הכוללת שלהם?','20 גרם',['5 גרם','20 גרם','80 גרם','אי אפשר לדעת'],'חלוקה לצורות קטנות אינה משנה את כמות החומר הכוללת ולכן המסה נשמרת.'] ],
+'נפח':[
+['mc','תרגול בסגנון החוברת: לאיזה מבין הייצוגים הבאים יש נפח ממשי?','קובייה',['קו ישר','ריבוע','קובייה','נקודה'],'קו הוא חד-ממדי וריבוע דו-ממדי; קובייה היא תלת-ממדית ולכן יש לה נפח.'],
+['mc','תרגול בסגנון החוברת: העבירו 20 מ״ל מים ממשורה לכוס. מה השתנה?','צורת גוף המים השתנתה אך נפחו נשאר 20 מ״ל',['הנפח והצורה השתנו','הנפח השתנה והצורה נשארה','צורת גוף המים השתנתה אך נפחו נשאר 20 מ״ל','גם הנפח וגם הצורה נשארו תמיד זהים'],'נוזל מקבל את צורת הכלי, אך בהעברה ללא איבוד חומר נפחו נשאר זהה.'],
+['mc','תרגול בסגנון החוברת: מה מאפיין כלי מדידה מכויל?','מסומנות עליו שנתות וערכי מידה מתאימים',['הוא שקוף בלבד','מסומנות עליו שנתות וערכי מידה מתאימים','הוא עשוי זכוכית בלבד','הוא תמיד מכיל 1 ליטר'],'כלי מכויל מאפשר לקבוע ערך מדידה לפי סימוני יחידות ושנתות.'],
+['mc','תרגול בסגנון החוברת: תיבה באורך 10 ס״מ, רוחב 5 ס״מ וגובה 20 ס״מ. מה נפחה?','1000 סמ״ק',['35 סמ״ק','100 סמ״ק','1000 סמ״ק','10000 סמ״ק'],'נפח תיבה = אורך × רוחב × גובה = 10×5×20 = 1000 סמ״ק, שהם גם 1000 מ״ל = 1 ליטר.'],
+['mc','תרגול בסגנון החוברת: במשורה 10 מ״ל מים. לאחר הכנסת טבעת המפלס 12 מ״ל. מה נפח הטבעת?','2 סמ״ק',['2 סמ״ק','10 סמ״ק','12 סמ״ק','22 סמ״ק'],'לפי עקרון דחיית הנוזל: 12−10 = 2 מ״ל = 2 סמ״ק.'],
+['mc','תרגול בסגנון החוברת: משנים את צורתו של גוש פלסטלינה בלי להוסיף או לגרוע חומר. מה צפוי לקרות לנפחו?','הנפח יישאר זהה',['הנפח יגדל','הנפח יקטן','הנפח יישאר זהה','אי אפשר למדוד שוב'],'שינוי צורה בלבד אינו משנה את נפח החומר הכולל.'],
+['mc','תרגול בסגנון החוברת: מדוע מערכת למדידת נפח גז צריכה להיות סגורה?','כדי למנוע דליפת גז ולמדוד את כולו',['כדי לחמם את הגז','כדי לשנות את צבעו','כדי למנוע דליפת גז ולמדוד את כולו','כדי להגדיל את המסה'],'דליפה תגרום לכך שלא כל הגז ייאסף ולכן המדידה לא תשקף את נפחו.'],
+['mc','מהו נפח?','המקום שגוף תופס במרחב',['המקום שגוף תופס במרחב','כמות החומר בגוף','משקל הגוף','הטמפרטורה שלו'],'נפח מתאר כמה מקום הגוף תופס.'],
+['mc','באיזה מכשיר מודדים נפח של נוזל?','משורה',['משורה','מאזניים','מדחום','שעון'],'נפח נוזלים מודדים בדרך כלל במשורה מדורגת.'],
+['mc','איזו יחידה מתאימה לנפח?','מ״ל',['מ״ל','גרם','ק״ג','מ״ג'],'מ״ל וליטר משמשים לנוזלים; סמ״ק ומ״ק הן גם יחידות נפח.'],
+['mc','1000 מ״ל שווים ל...', '1 ליטר',['1 ליטר','10 ליטר','100 ליטר','0.1 ליטר'],'1 ליטר = 1000 מיליליטר.'],
+['mc','כיצד מודדים נפח של אבן בעלת צורה לא סדירה?','באמצעות דחיית נוזל במשורה',['באמצעות דחיית נוזל במשורה','רק בסרגל','רק במאזניים','אי אפשר למדוד'],'מודדים נפח מים לפני ואחרי הטבלת האבן; ההפרש הוא נפח האבן.'],
+['mc','מה נכון לגבי גז בכלי סגור?', 'הגז מתפשט ותופס את כל נפח הכלי',['הגז מתפשט ותופס את כל נפח הכלי','הגז נמצא רק בתחתית הכלי','לגז אין נפח','נפח הגז תמיד קבוע גם בהחלפת כלי'],'גז מתפשט ותופס את כל נפח הכלי שבו הוא נמצא.'] ]};
+function derived(topic,l){
+ if(topic==='מסה'){
+   if(l===3){let total=pick([120,180,240,300]),jar=pick([20,30,40,50]);return {topic,type:'txt',q:`כלי ובתוכו חומר מונחים על מאזניים ומסתם יחד ${total} גרם. מסת הכלי הריק ${jar} גרם. מה מסת החומר בלבד בגרמים?`,a:String(total-jar),why:`מסת החומר = המסה הכוללת פחות מסת הכלי: ${total} − ${jar} = ${total-jar} גרם.`}}
+   let kg=pick([1,2,3,4,5]),g=kg*1000;return {topic,type:'txt',q:`המירי ${kg} ק״ג לגרמים.`,a:String(g),why:`1 ק״ג = 1000 גרם, לכן ${kg} × 1000 = ${g} גרם.`}
+ }
+ if(topic==='נפח'){
+   if(l===3){let L=pick([4,6,8,10]),W=pick([3,5,7]),H=pick([2,4,6]);return {topic,type:'txt',q:`תיבה באורך ${L} ס״מ, רוחב ${W} ס״מ וגובה ${H} ס״מ. מה נפחה בסמ״ק?`,a:String(L*W*H),why:`נפח תיבה = אורך × רוחב × גובה = ${L}×${W}×${H} = ${L*W*H} סמ״ק.`}}
+   let a=pick([20,35,50,70]),b=a+pick([8,12,15,20]);return {topic,type:'txt',q:`במשורה היו ${a} מ״ל מים. לאחר הטבלת אבן המפלס עלה ל-${b} מ״ל. מה נפח האבן במ״ל?`,a:String(b-a),why:`נפח האבן = המפלס אחרי פחות המפלס לפני: ${b} − ${a} = ${b-a} מ״ל.`}
+ }
+ if(topic==='חקר מדעי'){
+   if(l===3){let examples=[
+    {q:'תלמידים בודקים כיצד כמות הדשן משפיעה על גובה צמחי שעועית. הם משנים רק את כמות הדשן ומשקים את כל הצמחים באותה כמות מים. מהו הגורם הקבוע המתואר?',a:'כמות המים',o:['כמות המים','כמות הדשן','גובה הצמח','המסקנה'],why:'כמות המים נשמרת זהה ולכן היא גורם קבוע.'},
+    {q:'בניסוי התקבלו תוצאות שונות מאוד בשלוש חזרות שנעשו לכאורה באותם תנאים. מה הפעולה המדעית המתאימה ביותר?',a:'לבדוק את שיטת המדידה ולבצע חזרות נוספות',o:['לבחור רק את התוצאה הרצויה','לבדוק את שיטת המדידה ולבצע חזרות נוספות','להחליף את שאלת החקר במסקנה','להתעלם מההבדלים'],why:'פערים גדולים בין חזרות מחייבים לבדוק את שיטת המדידה, מקורות שגיאה ולחזור על הבדיקה.'}
+   ];let e=pick(examples);return {topic,type:'mc',...e}}
+   return {topic,type:'mc',q:'חוקרת משנה את כמות האור לצמחים ומודדת את גובהם לאחר שבועיים. מהו הגורם המושפע?',a:'גובה הצמחים',o:['גובה הצמחים','כמות האור','סוג העציץ','משך השבוע'],why:'הגובה הוא התוצאה הנמדדת ולכן הוא הגורם המושפע.'}
+ }
+ return {topic,type:'mc',q:l===3?'שתי קוביות בגודל זהה עשויות מחומרים שונים. מה ניתן להסיק בוודאות?':'בקבוק מלא מים נחשב...',a:l===3?'לשתיהן נפח גוף זהה':['גוף'],o:l===3?['לשתיהן נפח גוף זהה','לשתיהן מסה זהה','הן עשויות מאותו חומר','לשתיהן צפיפות זהה']:['גוף','חומר בלבד','יחידת נפח','מכשיר מדידה'],why:l===3?'גודל וצורה זהים נותנים נפח זהה, אך חומר שונה עשוי לתת מסה וצפיפות שונות.':'כמות המים שבבקבוק תופסת מקום ולכן אפשר להתייחס אליה כגוף.'}
+}
+function gen(topic,l){if(l>=2&&Math.random()<(l===3?.7:.5))return derived(topic,l);let b=pick(BANK[topic]);return {topic,type:b[0],q:b[1],a:b[2],o:b[3],why:b[4]}}
+function generate(n,only){let ts=only?[only]:TOPICS;return Array.from({length:n},()=>gen(pick(ts),level))}
+function lvl(){return `<div class=grid>${[['קל','הגדרות וזיהוי'],['בינוני','יישום וחישוב'],['מתקדם','יישום במצבים חדשים']].map((x,i)=>`<div class="level ${level===i+1?'sel':''}" onclick="level=${i+1};$$('.level').forEach(e=>e.classList.remove('sel'));this.classList.add('sel')"><b>${x[0]}</b><br><span class=small>${x[1]}</span></div>`).join('')}</div>`}
+function nav(){let t=[['home','📖 הסברים'],['practice','✏️ תרגול'],['exam','📝 מבחנים'],['summary','📊 הערכה עצמית']];$('#nav').innerHTML=t.map(x=>`<button id=n${x[0]} onclick="show('${x[0]}')">${x[1]}</button>`).join('')}
+function show(id){$$('.page,#nav button').forEach(x=>x.classList.remove('on'));$('#'+id).classList.add('on');$('#n'+id).classList.add('on');if(id==='summary')summary();scrollTo(0,0)}
+function inst(q){if(q.type==='txt')return 'הנחיה: כתבי את התשובה המספרית בלבד. אין צורך לכתוב את יחידת המידה.';return 'הנחיה: קראי היטב את השאלה ובחרי תשובה אחת. לאחר הסיום תקבלי גם הסבר.'}
+function qhtml(q,i){let b=q.type==='mc'?shuffle(q.o).map(o=>`<label class=opt><input type=radio name=q${i} value="${o}"> ${o}</label>`).join(''):`<input type=text id=a${i} inputmode=decimal>`;return `<div class="card q" id=q${i}><div class=instruction>${inst(q)}</div><p><b>${i+1}.</b> ${q.q}</p>${b}<div class=fb id=f${i}></div></div>`}
+function start(kind,n=16,only=null){current=generate(n,only);let h=kind==='exam'?'exam':'practice';$('#'+h+'Body').innerHTML=current.map(qhtml).join('')+`<div class=card style="text-align:center"><button class="btn g" onclick="grade('${kind}')">✔ סיום ובדיקה</button></div>`;$('#'+h+'Result').innerHTML='';show(h)}
+function grade(mode){let r=0,run=[];current.forEach((q,i)=>{let v=q.type==='mc'?(document.querySelector(`input[name=q${i}]:checked`)||{}).value:$('#a'+i).value,ok=norm(v)===norm(q.a);if(ok)r++;run.push({topic:q.topic,ok,level,mode,date:Date.now()});let box=$('#q'+i),f=$('#f'+i);box.classList.add(ok?'ok':'bad');f.style.display='block';f.innerHTML=(ok?'✅ נכון!':`❌ התשובה הנכונה: <b>${q.a}</b>`)+`<br>${q.why}`});history.push(...run);try{window.localStorage.setItem('sci7hist',JSON.stringify(history.slice(-600)));storageOK=true}catch(e){storageOK=false}let p=Math.round(100*r/current.length),w=weak(run);let host=mode==='exam'?'examResult':'practiceResult';$('#'+host).innerHTML=`<div class=card><h2>תוצאה: ${p}</h2><p>${p>=90?'🌟 שליטה מצוינת':p>=75?'👍 שליטה טובה, מומלץ לעבור על הטעויות':p>=60?'💪 יש בסיס טוב, אך כדאי לחזק':'📚 מומלץ לחזור להסברים ולתרגל שוב'}</p>${w.length?`<p><b>נושאים לחיזוק:</b> ${w.join(', ')}</p>${w.slice(0,2).map(t=>`<button class=btn onclick="start('practice',12,'${t}')">תרגול חיזוק: ${t}</button>`).join(' ')}`:'<p>✅ אין נושא מתחת ל-75% בסבב זה.</p>'}</div>`;$('#'+host).scrollIntoView({behavior:'smooth'})}
+function weak(arr=history){let m={};arr.forEach(x=>{m[x.topic]??=[0,0];m[x.topic][1]++;if(x.ok)m[x.topic][0]++});return Object.entries(m).filter(x=>x[1][1]&&x[1][0]/x[1][1]<.75).sort((a,b)=>a[1][0]/a[1][1]-b[1][0]/b[1][1]).map(x=>x[0])}
+function workbookPractice(){level=2;let qs=[];TOPICS.forEach(t=>{let arr=BANK[t].filter(x=>String(x[1]).includes('בסגנון החוברת'));arr.forEach(b=>qs.push({topic:t,type:b[0],q:b[1],a:b[2],o:b[3],why:b[4]}))});current=shuffle(qs);$('#practiceBody').innerHTML=current.map(qhtml).join('')+`<div class=card style="text-align:center"><button class="btn g" onclick="grade('practice')">✔ סיום ובדיקה</button></div>`;$('#practiceResult').innerHTML='';show('practice')}
+function quickExam(n){start('exam',n)}
+function summary(){let m={};history.forEach(x=>{m[x.topic]??=[0,0];m[x.topic][1]++;if(x.ok)m[x.topic][0]++});let rows=TOPICS.map(t=>{let v=m[t]||[0,0],p=v[1]?Math.round(v[0]/v[1]*100):0;return `<tr><td>${t}</td><td>${v[1]}</td><td>${p}%</td><td><div class=bar><i style="width:${p}%"></i></div></td></tr>`}).join(''),w=weak();$('#sumBody').innerHTML=`<div class=card><h2>התקדמות מצטברת</h2><table><tr><th>נושא</th><th>שאלות</th><th>הצלחה</th><th></th></tr>${rows}</table></div><div class=card><h3>המלצה אישית</h3>${!history.length?'עדיין אין תוצאות.':w.length?`כדאי להתמקד ב: <b>${w.join(', ')}</b><br><br>${w.map(t=>`<button class=btn onclick="start('practice',12,'${t}')">תרגול ${t}</button>`).join(' ')}`:'🌟 בכל הנושאים שנמדדו ההצלחה היא 75% ומעלה.'}<p class=small>${storageOK?'ההתקדמות נשמרת בדפדפן במכשיר זה.':'ההתקדמות נשמרת בזיכרון הדף כל עוד הוא פתוח.'}</p></div>`}
+function build(){nav();$('#main').innerHTML=`<section id=home class=page><div class=card><h2>📖 הסברים למבחן</h2><p class=warn><b>היקף המבחן:</b> גוף, חקר, מסה ונפח. חומר הלימוד לפי הודעת המורה וחוברת "חוקרים חומר ואנרגיה א'".</p></div>
+<div class=card><h2>1. גוף וחומר</h2><p><b>גוף</b> הוא כל דבר שתופס מקום בחלל. גוף יכול להיות חי או דומם, ובמצבי צבירה שונים. <b>חומר</b> הוא מה שממנו עשויים גופים.</p><p>לדוגמה: כוס היא גוף; זכוכית היא חומר. סיר הוא גוף; מתכת היא חומר.</p><div class=tip>זכרי: מסה, נפח וצורה מתארים גוף. צפיפות, קשיות ומוליכות הן דוגמאות לתכונות של חומר.</div></div>
+<div class=card><h2>2. חקר מדעי</h2><p>סדר עבודה טיפוסי: <b>שאלת חקר → השערה → תכנון ניסוי → ביצוע ומדידה → תוצאות → מסקנה.</b></p><p><b>גורם משפיע</b>: מה שהחוקר משנה במכוון. <b>גורם מושפע</b>: מה שמודדים בעקבות השינוי. <b>גורמים קבועים</b>: תנאים ששומרים זהים כדי שהבדיקה תהיה הוגנת.</p><div class=tip>דוגמה: האם טמפרטורת המים משפיעה על זמן התמוססות סוכר? משפיע = טמפרטורה; מושפע = זמן התמוססות; קבועים = כמות מים, כמות סוכר, כלי ועוד.</div><p>חוזרים על ניסויים ומדידות כדי לצמצם השפעת מקריות ולהגדיל אמינות.</p></div>
+<div class=card><h2>3. מסה</h2><p><b>מסה</b> היא כמות החומר בגוף. מכשיר המדידה: <b>מאזניים</b>. יחידות נפוצות: מ״ג, גרם, ק״ג.</p><div class=formula>1 kg = 1000 g &nbsp;&nbsp; | &nbsp;&nbsp; 1 g = 1000 mg</div><p>שינוי צורה או חלוקת גוף לחלקים אינם משנים את המסה הכוללת, כל עוד לא נוסף ולא אבד חומר.</p><div class=tip>אין לבלבל בין מסה למשקל: המבחן מדגיש מסה, שהיא כמות החומר.</div></div>
+<div class=card><h2>4. נפח</h2><p><b>נפח</b> הוא המקום שגוף תופס במרחב.</p><ul><li>נוזל: מודדים במשורה, לרוב במ״ל או ליטר.</li><li>גוף הנדסי: מודדים ממדים ומחשבים לפי נוסחה מתאימה.</li><li>מוצק לא סדיר: משתמשים ב<b>דחיית נוזל</b>. נפח הגוף = מפלס אחרי − מפלס לפני.</li><li>גז: מתפשט ותופס את כל נפח הכלי שבו הוא נמצא.</li></ul><div class=formula>1 L = 1000 mL &nbsp; | &nbsp; 1 mL = 1 cm³</div><div class=tip>בקריאת משורה מניחים אותה על משטח ישר וקוראים בגובה העיניים.</div></div>
+<div class=card><h2>📚 תרגול המבוסס על החוברת</h2><p>במאגר השאלות שולבו גם שאלות <b>מעובדות בסגנון התרגילים והניסויים שבחוברת</b>: קריאת משורה, העברת נוזל בין כלים, כיול כלי, חישוב נפח תיבה, דחיית נוזל, שינוי צורת פלסטלינה, מדידת גז במערכת סגורה, מאזני כפות ושימור מסה. הן אינן העתקה ארוכה של הספר, אך שומרות על אותו רעיון וסוג חשיבה כדי לתרגל לקראת שאלות דומות במבחן.</p></div><div class=card><h2>איך להשתמש בכלי?</h2><p>קראי את ההסברים, עברי לתרגול קל, אחר כך בינוני ומתקדם. רק לאחר מכן עברי למבחנים. מסך ההערכה העצמית יזהה אוטומטית נושאים מתחת ל-75% ויציע תרגול ממוקד.</p></div></section>
+<section id=practice class=page><div class=card><h2>✏️ דפי תרגול</h2>${lvl()}<p>בכל לחיצה נוצר דף חדש.</p><button class=btn onclick="start('practice',12)">🔄 צור דף תרגול חדש</button> <button class="btn gray" onclick="workbookPractice()">📚 תרגול בסגנון החוברת</button><div class=grid style="margin-top:10px">${TOPICS.map(t=>`<button class=btn onclick="start('practice',10,'${t}')">תרגול ${t}</button>`).join('')}</div></div><div id=practiceBody></div><div id=practiceResult></div></section>
+<section id=exam class=page><div class=card><h2>📝 מבחנים</h2>${lvl()}<p>המבחן משלב את כל ארבעת הנושאים. בכל פעם מתקבל סט חדש.</p><button class="btn g" onclick="quickExam(20)">מבחן מלא - 20 שאלות</button> <button class=btn onclick="quickExam(12)">מבחן קצר - 12 שאלות</button> <button class=btn onclick="quickExam(30)">מבחן אתגר - 30 שאלות</button></div><div id=examBody></div><div id=examResult></div></section><section id=summary class=page><div id=sumBody></div></section>`;show('home')}build();
 </script></body></html>
